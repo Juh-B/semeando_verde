@@ -54,7 +54,9 @@ gem "simple_form", github: "heartcombo/simple_form"
 
 # gem instaladas
 gem "devise"
-gem "dotenv-rails", groups: [:development, :test]
+
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'open-uri'
 
 
 group :development, :test do
