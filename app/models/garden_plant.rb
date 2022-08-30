@@ -1,7 +1,6 @@
 class GardenPlant < ApplicationRecord
-  belongs_to :garden_id
-  belongs_to :plant_id
-  belongs_to :user
+  belongs_to :garden
+  belongs_to :plant
 
-  has_one_attached :photo
+  # has_one_attached :photo
 end

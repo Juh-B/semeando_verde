@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :gardens, only: %I[show edit update] do
-    resources :garden_plants do
-      resources :plants, only: [:show]
-    end
+    resources :garden_plants, only: %I[create edit update]
   end
+
+  resources :plants, only: %I[index show]
+
   resources :garden_plants, only: :destroy
 end

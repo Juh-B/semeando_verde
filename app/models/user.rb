@@ -4,6 +4,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :garden, dependent: :destroy
-  has_many :plants
+  has_one :garden
+  after_create :user_garden
+
+  private
+
+  def user_garden
+    garden = Garden.new
+    garden.user = self
+
+    garden.save
+  end
+
 end
