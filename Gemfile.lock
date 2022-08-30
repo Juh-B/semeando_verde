@@ -93,6 +93,8 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     childprocess (4.1.0)
+    chronic_duration (0.10.6)
+      numerizer (~> 0.1.1)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     date (3.2.2)
@@ -105,6 +107,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.5.0)
     digest (3.1.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
@@ -153,12 +156,15 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     open-uri (0.2.0)
       stringio
       time
       uri
+    numerizer (0.1.1)
     orm_adapter (0.5.0)
     pg (1.4.3)
     public_suffix (5.0.0)
@@ -202,6 +208,23 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-rails (5.1.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.11.0)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -216,6 +239,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    spec (5.3.4)
+      chronic_duration (~> 0.10.2)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -259,6 +284,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -276,9 +302,11 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  rspec-rails
   sassc-rails
   selenium-webdriver
   simple_form!
+  spec
   sprockets-rails
   stimulus-rails
   turbo-rails
