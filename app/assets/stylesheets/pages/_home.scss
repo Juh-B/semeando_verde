@@ -1,1 +1,13 @@
-// Specific CSS for your home-page
+.imgs-home {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 50px 0;
+  gap: 15px;
+}
+
+.imgs-home img {
+  border-radius: 15px;
+  width: 100px;
+  height: auto;
+}
