@@ -7,6 +7,31 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon img {
+  width: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  padding: 0 15px;
+}
+
+.nav-item{
+  display: flex;
+}
+
+@media (max-width: 540px) {
+  .nav-item {
+    flex-direction: column;
+  }
+}
+
+.logo {
+  width: 100px;
+}
+
+.navbar-brand img{
+width: 250px;
 }
