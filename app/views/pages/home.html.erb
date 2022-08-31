@@ -7,31 +7,75 @@
   </div>
 </div>
 
-<div>
-  <div>
-    <h2>Sementinhas de cuidado</h2>
-    <p>Sabe quando você tem uma plantinha linda mas por alguma razão ela começa a morrer?
-      Pois eh! Você veio al local cer ajudando você a cuidar dela da melhor forma possível!!! </p>
-  </div>
+<div class="about-website">
+  <div class="container">
+    <div class="about-website-inf">
+      <h2>Sementinhas de cuidado</h2>
+      <p>Sabe quando você tem uma plantinha linda mas por alguma razão ela começa a morrer? Pois eh! Você veio ao local certo!</p>
+      <p><strong>Ajudamos você a cuidar dela da melhor forma possível!!!</strong></p>
+    </div>
 
-  <div class="imgs-home">
-        <%= image_tag 'logo.png', alt: "planta doente" %>
-        <%= image_tag 'logo.png', alt: "planta melhorando" %>
-        <%= image_tag 'logo.png', alt: "planta saudavel" %>
-      <%# <div class="col img_home">
+    <div class="d-flex justify-content-center">
+      <div class="imgs-home">
+        <div class='plant-bottom'>
+          <%= image_tag 'logo.png', alt: "planta doente" %>
+        </div>
+
+        <div class='svg-middle'>
+          <%= image_tag 'vector_3.svg' %>
+        </div>
+
+        <div>
+          <%= image_tag 'logo.png', alt: "planta melhorando" %>
+        </div>
+
+        <div class='svg-middle'>
+        <%= image_tag 'vector_3.svg', style: 'transform: scaleX(-1);' %>
+        </div>
+
+        <div class='plant-bottom'>
+          <%= image_tag 'logo.png', alt: "planta saudavel" %>
+        </div>
       </div>
+    </div>
 
-      <div class="col img_home">
-      </div>
-
-      <div class="col img_home">
-      </div> %>
   </div>
 </div>
 
 <section class="utilities">
   <h2>Como podemos te ajudar</h2>
-  <div>
-  <div>
-</section>
+  <%# <div class="card-utilities"> %>
+  <div class="row">
+    <div class="col-4">
+      <div class="d-flex justify-content-center w-100">
+        <div class="text-center utility-card">
+          <%= image_tag 'logo.png', alt: "Rega de planta", class:'img_utilities' %>
+          <h3>Rega</h3>
+          <%= image_tag 'line_2.svg', class:'line' %>
+          <p class="text-start">Informações sobre a quantidade de água indicada e periodicidade</p>
+        </div>
+      </div>
+    </div>
 
+    <div class="col-4">
+      <div class="d-flex justify-content-center w-100">
+        <div class="text-center utility-card">
+          <%= image_tag 'logo.png', alt: "Rega de planta", class:'img_utilities' %>
+          <h3>Rega</h3>
+          <%= image_tag 'line_2.svg', class:'line' %>
+          <p class="text-start">Informações sobre a quantidade de água indicada e periodicidade</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="d-flex justify-content-center w-100">
+        <div class="text-center utility-card">
+          <%= image_tag 'logo.png', alt: "Rega de planta", class:'img_utilities' %>
+          <h3>Rega</h3>
+          <%= image_tag 'line_2.svg', class:'line' %>
+          <p class="text-start">Informações sobre a quantidade de água indicada e periodicidade</p>
+        </div>
+      </div>
+  </div>
+</section>

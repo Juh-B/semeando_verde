@@ -1,13 +1,50 @@
+.about-website {
+  background: #F4FFF0;
+  padding: 40px;
+}
+
+.about-website-inf{
+  padding-bottom: 30px;
+}
+
 .imgs-home {
   display: flex;
-  justify-content:center;
-  align-items: center;
-  padding: 50px 0;
+  height: 130px;
   gap: 15px;
+
+  .plant-bottom {
+    align-self: flex-end;
+  }
+
+  .svg-middle {
+    align-self: center;
+  }
 }
 
 .imgs-home img {
   border-radius: 15px;
   width: 100px;
   height: auto;
+}
+
+.utilities {
+  background: #1A936F;
+  padding: 40px;
+}
+
+.img_utilities {
+  border-radius: 15px;
+  width: 100px;
+  height: 80px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.line {
+  width: 150px;
+  height: 20px;
+}
+
+.utility-card {
+  width: 250px;
 }
