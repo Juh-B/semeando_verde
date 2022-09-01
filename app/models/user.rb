@@ -14,6 +14,13 @@ class User < ApplicationRecord
     garden.user = self
 
     garden.save
+
+    # garden_plant = GardenPlant.new
+    # garden_plant.garden = garden
+
+    # garden_plant.plant = Plant.last
+
+    # garden_plant.save
   end
 
 end

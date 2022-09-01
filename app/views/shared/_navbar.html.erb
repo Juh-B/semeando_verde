@@ -1,9 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%# <div class="container-fluid"> %>
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to garden_path(current_user.garden), class: "navbar-brand" do %>
       <%= image_tag "svlogo.png" %>
     <% end %>
 
+  <div class="container-fluid">
     <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,17 +12,15 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-            <%= link_to "Meu Jardim", "#", class: "nav-link" %>
-            <%= link_to "Perfil Plantas", "#", class: "nav-link" %>
-            <%= link_to "Pesquisar", "#", class: "nav-link" %>
+            <%= link_to "Meu Jardim", garden_path(current_user.garden), class: "nav-link" %>
+            <%= link_to "Pesquisar", plants_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://ca.slack-edge.com/T02NE0241-U03NTPJJ8J0-de5860f4c1eb-512", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Cadastro", "#", class: "dropdown-item" %>
               <%= link_to "Editar perfil", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
@@ -32,5 +30,5 @@
         <% end %>
       </ul>
     </div>
-  <%# </div> %>
+  </div>
 </div>
