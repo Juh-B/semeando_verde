@@ -1,3 +1,4 @@
+// section about the website
 .about-website {
   background: #F4FFF0;
   padding: 40px;
@@ -27,13 +28,13 @@
   height: auto;
 }
 
+// section about the utilities
 .utilities {
   background: #1A936F;
-  padding: 40px;
+  padding: 20px;
 }
 
-.img_utilities {
-  border-radius: 15px;
+.utilities > i {
   width: 100px;
   height: 80px;
   justify-content: center;
@@ -46,5 +47,6 @@
 }
 
 .utility-card {
-  width: 250px;
+  width: 200px;
+  padding-top: 15px;
 }
