@@ -12,7 +12,8 @@ class User < ApplicationRecord
   def user_garden
     garden = Garden.new
     garden.user = self
-
+    garden.name = "Meu Jardim"
+    
     garden.save
 
     # garden_plant = GardenPlant.new
