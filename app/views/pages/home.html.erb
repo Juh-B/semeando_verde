@@ -3,7 +3,82 @@
 
   <div class="container">
     <h1><strong>Semeando Verde</strong></h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <p>O cuidado que as suas plantinhas merecem.</p>
   </div>
 </div>
 
+<section class="about-website">
+  <div class="container">
+    <div class="about-website-inf">
+      <h2>Sementinhas de cuidado</h2>
+      <p>Sabe quando você tem uma plantinha linda mas por alguma razão ela começa a morrer? Pois eh! Você veio ao local certo!</p>
+      <p><strong>Ajudamos você a cuidar dela da melhor forma possível!!!</strong></p>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div class="imgs-home">
+        <div class='plant-bottom'>
+          <%= image_tag 'logo.png', alt: "planta doente" %>
+        </div>
+
+        <div class='svg-middle'>
+          <%= image_tag 'vector_3.svg' %>
+        </div>
+
+        <div>
+          <%= image_tag 'logo.png', alt: "planta melhorando" %>
+        </div>
+
+        <div class='svg-middle'>
+        <%= image_tag 'vector_3.svg', style: 'transform: scaleX(-1);' %>
+        </div>
+
+        <div class='plant-bottom'>
+          <%= image_tag 'logo.png', alt: "planta saudavel" %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="utilities">
+  <div class="container">
+    <h2>Como podemos te ajudar</h2>
+    <div class="row">
+      <div class="col-4">
+        <div class="d-flex justify-content-center w-100">
+          <div class="text-center utility-card">
+            <i class="fas fa-sun"></i>
+            <h3>Iluminação</h3>
+            <%= image_tag 'line_2.svg', class:'line' %>
+            <p class="text-start">Saiba o quanto de sol a sua planta necessita</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-center w-100">
+          <div class="text-center utility-card">
+            <i class="fas fa-tint"></i>
+            <h3>Rega</h3>
+            <%= image_tag 'line_2.svg', class:'line' %>
+            <p class="text-start">Receba lembretes de quando regar-las</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-center w-100">
+          <div class="text-center utility-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Curiosidades</h3>
+            <%= image_tag 'line_2.svg', class:'line' %>
+            <p class="text-start">Tenha acesso à curiosidades e informações</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

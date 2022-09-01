@@ -1,22 +1,23 @@
-<div class="d-flex justify-content-center align-items-center h-100">
+<div class="back-color">
+  <div class="d-flex justify-content-center align-items-center h-100">
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
-      <%= f.error_notification %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
+        <%= f.error_notification %>
 
-      <div class="form-inputs d-flex justify-content-center align-items-center flex-column">
-        <h2 class="p-3">Forgot your password?</h2>
-        <div class="form-inputs mb-3">
-          <%= f.input :email,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" } %>
-        </div>
+        <div class="form-inputs d-flex justify-content-center align-items-center flex-column">
+          <h2 class="p-3">Forgot your password?</h2>
+          <div class="form-inputs mb-3">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Send me reset password instructions" %>
-        </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Send me reset password instructions" %>
+          </div>
 
-    <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
 
     <div class="drops">
         <div class="drop drop-1"></div>

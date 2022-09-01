@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
-
-  resources :gardens, only: %I[show edit update] do
-    resources :garden_plants, only: %I[create edit update]
+  authenticated :user do
+    root to: "gardens#show", as: :user_root
   end
 
-  resources :plants, only: %I[index show]
+  root to: "pages#home"
 
-  resources :garden_plants, only: :destroy
+  resources :gardens, only: %I[show edit update]
+
+  resources :plants, only: %I[index show] do
+    resources :garden_plants, only: :create
+  end
+
+  resources :garden_plants, only: %i[destroy edit update]
 end
