@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     resources :garden_plants, only: :create
   end
 
-  resources :garden_plants, only: %i[destroy edit update]
+  resources :garden_plants, only: %i[destroy edit update show]
 end
