@@ -1,44 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(assets/succulent.jpg);" >
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
   <div class="container">
-    <h1><strong>Semeando Verde</strong></h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <h1 class='text-center'><strong>Meu Jardim</strong></h1>
   </div>
 </div>
 
 
-<div class="d-flex justify-content-center align-items-center ">
-  <div class="description-box m-5">
-      <div class="grid d-flex justify-content-between align-items-center" style="width: 60rem;">
+<% @garden_plants.each do |garden_plant| %>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="description-box m-5">
+      <div class="grid d-flex justify-content-between align-items-center" style="width: 80rem;">
         <div class="grid-product">
-          <%= image_tag "succulent.jpg", width: 100, height: 80, alt: "suculentas" %>
-          <div >
-            <h5 class="card-title mb-2">Suculentas</h5>
+        <img src=<%= garden_plant.plant.img_url %> >
+          <div>
+            <h5 class="card-title mb-2"><strong><%= garden_plant.plant.name %></strong>
             <div><i class="fa-solid fa-sun"></i> lighting</div>
             <div><i class="fa-solid fa-droplet"></i> water</div>
             <div><i class="fa-solid fa-dog"></i> pet friendly</div>
           </div>
         </div>
-
-        <div class="grid-product">
-          <%= image_tag "succulent.jpg", width: 100, height: 80, alt: "suculentas" %>
-          <div >
-            <h5 class="card-title mb-2">Suculentas</h5>
-            <div><i class="fa-solid fa-sun"></i> lighting</div>
-            <div><i class="fa-solid fa-droplet"></i> water</div>
-            <div><i class="fa-solid fa-dog"></i> pet friendly</div>
-          </div>
-        </div>
-
-        <div class="grid-product">
-          <%= image_tag "succulent.jpg", width: 100, height: 80, alt: "suculentas" %>
-          <div >
-            <h5 class="card-title mb-2">Suculentas</h5>
-            <div><i class="fa-solid fa-sun"></i> lighting</div>
-            <div><i class="fa-solid fa-droplet"></i> water</div>
-            <div><i class="fa-solid fa-dog"></i> pet friendly</div>
-          </div>
-        </div>
-
-      </div>
+      <% end %>
+    </div>
   </div>
 </div>
