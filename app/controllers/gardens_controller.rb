@@ -4,6 +4,5 @@ class GardensController < ApplicationController
   def show
     @garden = current_user.garden
     @garden_plants = @garden.garden_plants
-    # @garden_plant = GardenPlant.find(params[:id])
   end
 end
