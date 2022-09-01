@@ -1,1 +1,73 @@
-<div class="quadrado"></div>
+<div class="fundo">
+  <div class="search">
+    <div class="row">
+      <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Encontre uma planta ..."
+        %>
+        <%= submit_tag "Search", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="grid-card">
+    <div class= "row justify-content-between">
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class= "row">
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+        <div class="card">
+            <div><%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %></div>
+          <div class="card-body">
+            <h5 class="card-title">Suculentas</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
