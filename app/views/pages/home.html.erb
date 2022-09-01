@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="about-website">
+<section class="about-website">
   <div class="container">
     <div class="about-website-inf">
       <h2>Sementinhas de cuidado</h2>
@@ -40,42 +40,45 @@
     </div>
 
   </div>
-</div>
+</section>
 
 <section class="utilities">
-  <h2>Como podemos te ajudar</h2>
-  <%# <div class="card-utilities"> %>
-  <div class="row">
-    <div class="col-4">
-      <div class="d-flex justify-content-center w-100">
-        <div class="text-center utility-card">
-          <%= image_tag 'logo.png', alt: "Rega de planta", class:'img_utilities' %>
-          <h3>Rega</h3>
-          <%= image_tag 'line_2.svg', class:'line' %>
-          <p class="text-start">Informações sobre a quantidade de água indicada e periodicidade</p>
+  <div class="container">
+    <h2>Como podemos te ajudar</h2>
+    <div class="row">
+      <div class="col-4">
+        <div class="d-flex justify-content-center w-100">
+          <div class="text-center utility-card">
+            <i class="fas fa-sun"></i>
+            <h3>Iluminação</h3>
+            <%= image_tag 'line_2.svg', class:'line' %>
+            <p class="text-start">Saiba o quanto de sol a sua planta necessita</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-4">
-      <div class="d-flex justify-content-center w-100">
-        <div class="text-center utility-card">
-          <%= image_tag 'logo.png', alt: "Rega de planta", class:'img_utilities' %>
-          <h3>Rega</h3>
-          <%= image_tag 'line_2.svg', class:'line' %>
-          <p class="text-start">Informações sobre a quantidade de água indicada e periodicidade</p>
+      <div class="col-4">
+        <div class="d-flex justify-content-center w-100">
+          <div class="text-center utility-card">
+            <i class="fas fa-tint"></i>
+            <h3>Rega</h3>
+            <%= image_tag 'line_2.svg', class:'line' %>
+            <p class="text-start">Receba lembretes de quando regar-las</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-4">
-      <div class="d-flex justify-content-center w-100">
-        <div class="text-center utility-card">
-          <%= image_tag 'logo.png', alt: "Rega de planta", class:'img_utilities' %>
-          <h3>Rega</h3>
-          <%= image_tag 'line_2.svg', class:'line' %>
-          <p class="text-start">Informações sobre a quantidade de água indicada e periodicidade</p>
+      <div class="col-4">
+        <div class="d-flex justify-content-center w-100">
+          <div class="text-center utility-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Curiosidades</h3>
+            <%= image_tag 'line_2.svg', class:'line' %>
+            <p class="text-start">Tenha acesso à curiosidades e informações</p>
+          </div>
         </div>
       </div>
+
+    </div>
   </div>
 </section>
