@@ -1,6 +1,11 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
   <div class="container">
-    <h1 class='text-center'><strong>Meu Jardim</strong></h1>
+    <%# <h1 class='text-center'><strong><%= @garden.name</strong></h1> %>
+
+    <%= turbo_frame_tag dom_id(@garden) do %>
+      <h1 class='text-center'><strong><%= link_to @garden.name, edit_garden_path(@garden) %></strong></h1>
+    <% end %>
+
   </div>
 </div>
 
@@ -9,16 +14,18 @@
   <div class="d-flex justify-content-center align-items-center">
     <div class="description-box m-5">
       <div class="grid d-flex justify-content-between align-items-center" style="width: 80rem;">
+
         <div class="grid-product">
-        <img src=<%= garden_plant.plant.img_url %> >
+          <img src=<%= garden_plant.plant.img_url %> >
           <div>
-            <h5 class="card-title mb-2"><strong><%= garden_plant.plant.name %></strong>
+            <h5 class="card-title mb-2"><strong><%= garden_plant.plant.name %></strong></h5>
             <div><i class="fa-solid fa-sun"></i> lighting</div>
             <div><i class="fa-solid fa-droplet"></i> water</div>
             <div><i class="fa-solid fa-dog"></i> pet friendly</div>
           </div>
         </div>
-      <% end %>
+
+      </div>
     </div>
   </div>
-</div>
+<% end %>

@@ -1,0 +1,4 @@
+<%= simple_form_for garden, id:"#{dom_id(garden)}_form" do |f| %>
+  <%= f.input :name, class:"form-control", label: false %>
+  <%= f.submit "Salvar" %>
+<% end %>
