@@ -53,7 +53,7 @@
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 25px;
-  margin-top: 25px;
+  padding: 100px 0;
 
   a {
     text-decoration: none;
@@ -96,4 +96,8 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.btn-my-search {
+  background-color: white;
 }

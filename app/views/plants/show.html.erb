@@ -5,17 +5,14 @@
           <p><em><small><%= @plant.botanic_name %></em></small></p>
       </div>
   </div>
-
     <div class="big-ban container">
       <div>
         <h5><strong>Descrição</strong></h5>
           <p class="mb-2-5rem"><%= @plant.description %></p>
-
         <h5><strong>Iluminação</strong></h5>
           <p class="mb-2-5rem"><%= @plant.lighting %></p>
         <h5><strong>Regar</strong></h5>
           <p class="mb-2-5rem"><%= @plant.water %></p>
-
         <h5><strong>Informações</strong></h5>
           <% @plant.infos.delete("*").split("\n\n").each do |info| %>
             <ul>
