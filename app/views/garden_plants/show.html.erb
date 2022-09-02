@@ -13,7 +13,7 @@
 
         <h5><strong>Iluminação</strong></h5>
           <p class="mb-2-5rem"><%= @garden_plant.plant.lighting %></p>
-        <h5><strong>Rega</strong></h5>
+        <h5><strong>Regar</strong></h5>
           <p class="mb-2-5rem"><%= @garden_plant.plant.water %></p>
 
         <h5><strong>Informações</strong></h5>
@@ -26,7 +26,7 @@
         <div class="img-btn">
           <div class="btn-up">
             <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
-            <%= link_to 'Alterar foto', plant_garden_plants_path(@garden_plant), data: { turbo_method: :post, turbo_confirm: "Deseja alterar essa planta em seu jardim?" }, class: "btn-add" %>
+            <%= link_to 'Alterar imagem', plant_garden_plants_path(@garden_plant), data: { turbo_method: :post, turbo_confirm: "Deseja alterar essa planta em seu jardim?" }, class: "btn-add" %>
           </div>
           <div class="form-check form-switch">
             <p>Gostaria de receber notificações?</p>
