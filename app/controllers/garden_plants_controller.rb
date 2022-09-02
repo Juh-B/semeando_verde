@@ -28,7 +28,7 @@ class GardenPlantsController < ApplicationController
 
   def destroy
     @garden_plant.destroy
-    redirect_to garden_path(current_user.garden)
+    redirect_to garden_path(current_user.garden), status: :see_other
   end
 
   private

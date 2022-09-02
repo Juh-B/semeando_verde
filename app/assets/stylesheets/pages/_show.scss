@@ -54,6 +54,7 @@
 }
 
 .plants-container{
+
   .grid-product{
     background-color:#ADE4B5;
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
@@ -62,17 +63,21 @@
     align-items: center;
     gap: 15px;
     padding: 20px;
-
   }
 
-.grid-product{
-  background-color:#ADE4B5;
-  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
-}
+  a {
+    text-decoration: none;
+    color: #2B4141;
+  }
+
+ .grid-product{
+    background-color:#ADE4B5;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+  }
 
 
   img {
