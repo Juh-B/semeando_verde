@@ -21,10 +21,11 @@
   <div class="grid-card">
     <% @plants.each do |plant| %>
       <div class="plant-card">
-        <div><%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %></div>
+        <a href="<%=plant_path(plant)%>">
+          <%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %>
+        </a>
         <div class="card-body">
           <h5 class="card-title"><%= plant.name %></h5>
-          <%= link_to 'Adicionar', plant_garden_plants_path(plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" } %>
         </div>
       </div>
     <% end %>
