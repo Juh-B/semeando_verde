@@ -1,5 +1,5 @@
 .back-col {
-background-color: #f4fff0;
+  background-color: #f4fff0;
 }
 
 .plant-name {
@@ -37,9 +37,21 @@ background-color: #f4fff0;
 }
 
 .btn-add {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: #cc6f6e;
+  font-weight: bold;
   border-radius: 15px;
+  padding: 14px 40px;
+  width: 80%;
+  transition-duration: 0.4s;
 }
 
+.btn-add:hover {
+  background-color:#f19b99;
+  color: white;
+}
 
 .plants-container{
   .grid-product{
@@ -53,10 +65,32 @@ background-color: #f4fff0;
 
   }
 
+.grid-product{
+  background-color:#ADE4B5;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
 
   img {
     height: 140px;
     width: 150px;
     object-fit: cover;
   }
+}
+
+.form-check {
+  display: flex;
+  gap: 48px;
+  font-weight: bold;
+}
+
+.btn-up {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }

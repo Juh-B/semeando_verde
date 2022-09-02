@@ -1,1 +1,32 @@
 
+<div class="back-col">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
+      <div class="plant-name">
+        <h1><strong><%= @plant.name %></strong></h1>
+          <p><em><small><%= @plant.botanic_name %></em></small></p>
+      </div>
+  </div>
+
+    <div class="big-ban container">
+      <div>
+        <h5><strong>Descrição</strong></h5>
+          <p class="mb-2-5rem"><%= @plant.description %></p>
+
+        <h5><strong>Iluminação</strong></h5>
+          <p class="mb-2-5rem"><%= @plant.lighting %></p>
+        <h5><strong>Rega</strong></h5>
+          <p class="mb-2-5rem"><%= @plant.water %></p>
+
+        <h5><strong>Informações</strong></h5>
+          <% @plant.infos.delete("*").split("\n\n").each do |info| %>
+            <ul>
+              <li><%= info %></li>
+            </ul>
+          <% end %>
+      </div>
+        <div class="img-btn">
+            <img src=<%= @plant.img_url %> class="img-ban">
+            <%= link_to 'Adicionar', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-add" %>
+        </div>
+    </div>
+</div>
