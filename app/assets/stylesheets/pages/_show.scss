@@ -48,37 +48,42 @@
   transition-duration: 0.4s;
 }
 
-.btn-add:hover {
-  background-color:#f19b99;
-  color: white;
-}
 
-.plants-container{
-  .grid-product{
-    background-color:#ADE4B5;
-    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
+.plants {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  padding: 100px 0;
 
+  a {
+    text-decoration: none;
+    color: #2B4141;
   }
 
-.grid-product{
-  background-color:#ADE4B5;
-  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
-}
+  .card-product {
+    background-color:#ADE4B5;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 15px;box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
 
+    .card-content {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      right: 55px;
+    }
 
-  img {
-    height: 140px;
-    width: 150px;
-    object-fit: cover;
+    img {
+          height: 140px;
+          width: 150px;
+          box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+          border-radius: 10px;
+          object-fit: cover;
+        }
   }
 }
 
@@ -93,4 +98,8 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.btn-my-search {
+  background-color: white;
 }

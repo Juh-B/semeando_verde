@@ -1,17 +1,23 @@
+.color-background {
+  background: linear-gradient(#F4FFF0, #1A936F)
+}
+
 // section about the website
 .about-website {
-  background: #F4FFF0;
-  padding: 40px;
+  // background: #F4FFF0;
+  padding: 50px;
 }
 
 .about-website-inf{
   padding-bottom: 30px;
 }
 
+
 .imgs-home {
   display: flex;
-  height: 130px;
-  gap: 15px;
+  height: 160px;
+  gap: 30px;
+
 
   .plant-bottom {
     align-self: flex-end;
@@ -24,14 +30,21 @@
 
 .imgs-home img {
   border-radius: 15px;
-  width: 100px;
+  width: 120px;
+  height: auto;
+
+}
+
+.logo-temporariamente img {
+  width: 250px;
   height: auto;
 }
 
 // section about the utilities
+
 .utilities {
-  background: #1A936F;
-  padding: 20px;
+  // background: #1A936F;
+  padding: 40px 20px;
 }
 
 .utilities > i {
