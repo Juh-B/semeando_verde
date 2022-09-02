@@ -1,3 +1,4 @@
+
 <div class="back-col">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
       <div class="plant-name">
@@ -24,16 +25,8 @@
           <% end %>
       </div>
         <div class="img-btn">
-          <div class="btn-up">
             <img src=<%= @plant.img_url %> class="img-ban">
-            <%= link_to 'Adicionar foto', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-add" %>
-          </div>
-          <div class="form-check form-switch">
-            <p>Gostaria de receber notificações ?</p>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-            <label class="form-check-label" for="flexSwitchCheckChecked"> </label>
-          </div>
-          <%= link_to 'Adicionar', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-add" %>
+            <%= link_to 'Adicionar', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-add" %>
         </div>
     </div>
 </div>
