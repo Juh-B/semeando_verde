@@ -1,5 +1,8 @@
 class GardenPlantsController < ApplicationController
-  before_action :set_garden_plant, only: %i[edit update destroy]
+  before_action :set_garden_plant, only: %i[show edit update destroy]
+
+  def show
+  end
 
   def create
     garden = current_user.garden
