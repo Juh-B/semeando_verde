@@ -19,86 +19,14 @@
   </div>
 
   <div class="grid-card">
-    <div class= "row justify-content-between">
-      <div class="col d-flex justify-content-center align-items-center">
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
+    <% @plants.each do |plant| %>
+      <div class="plant-card">
+        <div><%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= plant.name %></h5>
+          <%= link_to 'Adicionar', plant_garden_plants_path(plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" } %>
         </div>
-
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
       </div>
-    </div>
-
-    <div class= "row">
-      <div class="col d-flex justify-content-center align-items-center">
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <%= image_tag "succulent.jpg", width: 170, height: 140, alt: "suculentas" %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Suculentas</h5>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>

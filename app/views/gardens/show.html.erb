@@ -9,23 +9,22 @@
   </div>
 </div>
 
-
-<% @garden_plants.each do |garden_plant| %>
-  <div class="d-flex justify-content-center align-items-center">
-    <div class="description-box m-5">
-      <div class="grid d-flex justify-content-between align-items-center" style="width: 80rem;">
-
-        <div class="grid-product">
-          <img src=<%= garden_plant.plant.img_url %> >
-          <div>
-            <h5 class="card-title mb-2"><strong><%= garden_plant.plant.name %></strong></h5>
-            <div><i class="fa-solid fa-sun"></i> lighting</div>
-            <div><i class="fa-solid fa-droplet"></i> water</div>
-            <div><i class="fa-solid fa-dog"></i> pet friendly</div>
+  <div class= "plants-container">
+    <div class="d-flex justify-content-center align-items-center">
+      <% @garden_plants.each do |garden_plant| %>
+        <div class="description-box">
+          <div class="grid d-flex justify-content-between align-items-center">
+            <div class="grid-product">
+              <img src=<%= garden_plant.plant.img_url %> >
+              <div>
+                <h5 class="card-title mb-2"><strong><%= garden_plant.plant.name %></strong></h5>
+                <div><i class="fa-solid fa-sun"></i> lighting</div>
+                <div><i class="fa-solid fa-droplet"></i> water</div>
+                <div><i class="fa-solid fa-dog"></i> pet friendly</div>
+              </div>
+            </div>
           </div>
         </div>
-
-      </div>
+      <% end %>
     </div>
   </div>
-<% end %>
