@@ -40,23 +40,23 @@ background-color: #f4fff0;
   border-radius: 15px;
 }
 
-.grid-product{
-  background-color:#ADE4B5;
-  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
 
-}
+.plants-container{
+  .grid-product{
+    background-color:#ADE4B5;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
 
-.grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+  }
 
-.grid-product img {
-  height: 140%;
-  width: 150px;
-  object-fit: cover;
+
+  img {
+    height: 140px;
+    width: 150px;
+    object-fit: cover;
+  }
 }

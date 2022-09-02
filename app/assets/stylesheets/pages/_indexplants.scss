@@ -13,32 +13,31 @@
 }
 
 .grid-card {
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: -80px;
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 850px;
   height: 730px;
   border-radius: 5%;
-  // justify-content: center;
   background-color:#d5e6d7;
-  // position: absolute;
-  // right: 420px;
-  // top: 300px;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
-  .card{
-   margin: 20px;
-   width: 180px;
-   height: 250px;
-   background-color:#faefef;
-
+  overflow-y: auto;
+  gap: 1rem;
+  padding: 2rem;
+  .plant-card{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+    .card-body {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      border-radius: 15px;
+    }
   }
-}
-
-.card-body {
-  display: flex;
-  justify-content: center;
-  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
 }
