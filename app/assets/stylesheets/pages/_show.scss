@@ -52,7 +52,7 @@
 .plants {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 25px;
+  gap: 70px;
   margin-top: 25px;
 
 
@@ -63,12 +63,14 @@
     align-items: center;
     gap: 10px;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 15px;box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
 
     .card-content {
       display: flex;
       gap: 50px;
       align-items: center;
+      position: relative;
+      right: 55px;
     }
 
     img {
