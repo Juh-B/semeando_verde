@@ -1,33 +1,30 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
-  <div class="container">
-    <h1 class='text-center'><strong></strong></h1>
-  </div>
-</div>
-
-<div class="fundo">
-  <div class="search">
-    <div class="row">
-      <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Encontre uma planta ..."
-        %>
-        <%= submit_tag "Search", class: "btn btn-success" %>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="grid-card">
-    <% @plants.each do |plant| %>
-      <div class="plant-card">
-        <a href="<%=plant_path(plant)%>">
-          <%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %>
-        </a>
-        <div class="card-body">
-          <h5 class="card-title"><%= plant.name %></h5>
+<div class="back-col">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" ></div>
+    <div class="fundo">
+      <div class="search">
+        <div class="row">
+          <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Encontre uma planta ..."
+            %>
+            <%= submit_tag "Search", class: "btn btn-success" %>
+          <% end %>
         </div>
       </div>
-    <% end %>
-  </div>
+
+      <div class="grid-card">
+        <% @plants.each do |plant| %>
+          <div class="plant-card">
+            <a href="<%=plant_path(plant)%>">
+              <%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title"><%= plant.name %></h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
 </div>
