@@ -4,7 +4,6 @@
 
 // section about the website
 .about-website {
-  // background: #F4FFF0;
   padding: 50px;
 }
 
@@ -43,7 +42,6 @@
 // section about the utilities
 
 .utilities {
-  // background: #1A936F;
   padding: 40px 20px;
 }
 
@@ -62,4 +60,28 @@
 .utility-card {
   width: 200px;
   padding-top: 15px;
+}
+
+.footer {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
 }
