@@ -1,0 +1,6 @@
+
+<%= simple_form_for @garden_plant do |f| %>
+  <%= f.input :title %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit class: 'btn btn-outline-dark' %>
+<% end %>
