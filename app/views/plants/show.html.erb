@@ -13,6 +13,14 @@
           <p class="mb-2-5rem"><%= @plant.lighting %></p>
         <h5><strong>Regar</strong></h5>
           <p class="mb-2-5rem"><%= @plant.water %></p>
+        <h5><strong>Tóxica</strong></h5>
+        <p class="mb-2-5rem">
+          <% if @plant.toxic == true %>
+            <%= 'Sim' %>
+          <% else %>
+            <%= 'Não' %>
+        <% end %>
+          </p>
         <h5><strong>Informações</strong></h5>
           <% @plant.infos.delete("*").split("\n\n").each do |info| %>
             <ul>

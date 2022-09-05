@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+GardenPlant.destroy_all
+Garden.destroy_all
+User.destroy_all
 Plant.destroy_all
+
 puts "Create Plants"
 
 Plant.create!(
@@ -20,8 +24,10 @@ Plant.create!(
 * Durante o inverno, o regime de rega deve ser menos frequente. Isso significa que a planta deve ser regada quando a parte superior do solo estiver seca, para imitar as condições naturais de dormência.
 
 * Mantenha-os ao ar livre se você mora em um clima quente e úmido, ou mantenha-os dentro de casa se você mora em um clima mais frio.',
-  img_url: 'https://static3.tcdn.com.br/img/img_prod/350075/samambaia_americana_8677_1_20190521161357.jpg'
+  img_url: 'https://static3.tcdn.com.br/img/img_prod/350075/samambaia_americana_8677_1_20190521161357.jpg',
+  toxic: true
 )
+
 
 
 Plant.create!(
@@ -35,7 +41,8 @@ Plant.create!(
   * Também encanta os pais de planta, o fato de ela ser uma das mais versáteis no universo da jardinagem, indicada tanto para vasos quanto canteiros, seja em ambientes externos ou internos.
 
   * Exposição ao sol diretamente e altas temperaturas podem causar queda das folhas.',
-  img_url: 'https://weflores.com/wp-content/uploads/Cr%C3%B3ton-petra.jpg'
+  img_url: 'https://weflores.com/wp-content/uploads/Cr%C3%B3ton-petra.jpg',
+  toxic: true
 )
 
 Plant.create!(
@@ -49,11 +56,12 @@ Plant.create!(
 		* Zamioculca é uma suculenta. Suculenta é toda planta que tem capacidade de armazenar água em sua raiz, talo ou folha, em quantidade maior do que outras plantas.
 
 		* Pode purificar o ar e absorver dióxido e formaldeído.',
-  img_url: 'https://casa.abril.com.br/wp-content/uploads/2022/04/Como-cultivar-Zamioculca-01.jpeg?quality=95&strip=info'
+  img_url: 'https://casa.abril.com.br/wp-content/uploads/2022/04/Como-cultivar-Zamioculca-01.jpeg?quality=95&strip=info',
+  toxic: true
 )
 
 Plant.create!(
-  name: 'Espada-de-são-jorge',
+  name: 'Espada-de-São-Jorge',
   botanic_name: 'Sansevieria trifasciata ',
   description: 'A Espada-de-são-jorge é muito apreciada como planta ornamental em todo o mundo, mas no Brasil, também é usada na superstição de proteger contra o mau-olhado e tem importância em religiões afro-brasileiras, no âmbito das quais é conhecida como espada-de-ogum ou espada-de-iansã. Porém, tenha cuidado, pois a espada-de-são-jorge é tóxica.',
   water: 'Regas espaçadas, não deixar solo encharcado',
@@ -63,7 +71,8 @@ Plant.create!(
 		* Diversos tamanhos e formatos |  Vida longa
 
 		* Encabeça a lista como sendo a mais tolerante de todas as plantas decorativas para sobreviver às condições de cultivo mais',
-  img_url: 'https://static3.tcdn.com.br/img/img_prod/350075/sansevieria_variada_espada_de_sao_jorge_pote_24_11587_1_20220412114309.jpg'
+  img_url: 'https://static3.tcdn.com.br/img/img_prod/350075/sansevieria_variada_espada_de_sao_jorge_pote_24_11587_1_20220412114309.jpg',
+  toxic: true
 )
 
 
@@ -78,7 +87,8 @@ Plant.create!(
 		* A troca de vaso todo ano é recomendada, uma vez que ajuda a prolongar a vida da planta.
 
 		* Não plante outras espécies no mesmo vaso.',
-  img_url: 'https://tudojardim.com/wp-content/uploads/2020/09/17-planta-ornamental-costela-de-ad%C3%A3o.jpg'
+  img_url: 'https://tudojardim.com/wp-content/uploads/2020/09/17-planta-ornamental-costela-de-ad%C3%A3o.jpg',
+  toxic: true
 )
 
 
@@ -93,7 +103,8 @@ Plant.create!(
 		* Simboliza hospitalidade e com a flor aberta, tem o formato de coração, inspirando felicidade e abundância.
 
 		* Nativos da América Latina, n​​o Brasil, o tipo de Antúrio mais conhecido é o vermelho, mas existem ainda Antúrios nas cores branca, rosa, salmão e marrom.',
-  img_url: 'https://casa.abril.com.br/wp-content/uploads/2021/08/como-cultivar-anturio-casa.com-7-the-healthy-house-plant.jpg?resize=630,421'
+  img_url: 'https://casa.abril.com.br/wp-content/uploads/2021/08/como-cultivar-anturio-casa.com-7-the-healthy-house-plant.jpg?resize=630,421',
+  toxic: true
 )
 
 Plant.create!(
@@ -107,7 +118,8 @@ Plant.create!(
 		* Podem ser tóxicas para animais e crianças.
 
 		* Não suporta baixas temperaturas.',
-  img_url: 'https://www.decorfacil.com/wp-content/uploads/2018/12/20181219jiboia-na-decoracao-7.jpg'
+  img_url: 'https://www.decorfacil.com/wp-content/uploads/2018/12/20181219jiboia-na-decoracao-7.jpg',
+  toxic: true
 )
 
 
@@ -122,7 +134,8 @@ Plant.create!(
 		* O vento pode ser um prejuízo, pois a planta seca muito rapidamente. Se a planta secar dentro de um período de tempo muito curto, ela não está hidratando nada.
 
 		 * Estão na moda e são boas opções para quem não tem muito espaço ou para quem mora em apartamentos e não pode ter um jardim com terra. ',
-  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2018/08/plantas-faceis-de-cuidar-3.jpg'
+  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2018/08/plantas-faceis-de-cuidar-3.jpg',
+  toxic: false
 )
 
 
@@ -137,7 +150,8 @@ Plant.create!(
 		* Às vezes, as flores são usadas como componentes de salada em certas regiões da Oceania.
 
 		* A maioria das plantas de hibisco , com suas flores grandes e brilhantes, são amplamente utilizadas como plantas de jardim para trazer um estilo tropical.',
-  img_url: 'https://www.picturethisai.com/image-handle/website_cmsname/image/1080/1CEE4C0DD413447D8A07A9679DC8E7AD.jpeg?x-oss-process=image/format,webp'
+  img_url: 'https://www.picturethisai.com/image-handle/website_cmsname/image/1080/1CEE4C0DD413447D8A07A9679DC8E7AD.jpeg?x-oss-process=image/format,webp',
+  toxic: true
 )
 
 
@@ -150,7 +164,8 @@ Plant.create!(
   infos: '* Entre as opções de flores ornamentais, as violetas entram como opções delicadas e lindas para cultivo em pequenos vasos.
 
 		* Para muitos cultivadores, o significado da flor violeta está vinculado as suas cores como a espécie de cor roxa que é atribuída ao mistério de magia e espiritualidade.',
-  img_url: 'https://www.floresonline.com.br/media/catalog/product/b/a/baixa-2633-0.webp'
+  img_url: 'https://www.floresonline.com.br/media/catalog/product/b/a/baixa-2633-0.webp',
+  toxic: true
 )
 
 
@@ -165,7 +180,8 @@ Plant.create!(
 		* Uma opção de fácil cultivo e que traz lindas flores é o lírio da paz, que pode ser cultivado em jardins ou em vasos.
 
 		* A espécie tem folhagem verde escura e brilhante com flores brancas, que lembram lírios. Sua flor tem rápido crescimento durante o verão.',
-  img_url: 'https://tudojardim.com/wp-content/uploads/2020/09/29-planta-ornamental-l%C3%ADrio-da-paz.jpg'
+  img_url: 'https://tudojardim.com/wp-content/uploads/2020/09/29-planta-ornamental-l%C3%ADrio-da-paz.jpg',
+  toxic: true
 )
 
 Plant.create!(
@@ -179,7 +195,8 @@ Plant.create!(
 		* As flores do girassol se caracterizam por um comportamento conhecido como heliotropismo, ou seja, elas seguem o movimento do Sol, do nascente ao poente.
 
 		* O girassol comum é muitas vezes o tema da música, poesia e pinturas. A pintura mais famosa é o girassol de Van Gogh.',
-  img_url: 'https://a-static.mlcdn.com.br/1500x1500/arranjo-girassol-vaso-espelho-flores-e-cia/floresecia/8543467766/5db329d93e383488fefcd106469905b5.jpg'
+  img_url: 'https://a-static.mlcdn.com.br/1500x1500/arranjo-girassol-vaso-espelho-flores-e-cia/floresecia/8543467766/5db329d93e383488fefcd106469905b5.jpg',
+  toxic: false
 )
 
 
@@ -192,7 +209,8 @@ Plant.create!(
   infos: '* Essa planta pode ser facilmente transplantada, mas isso só deve ser feito durante a dormência, no outono ou inverno. Quando for a hora, certifique-se de desenterrar toda a raiz e replantar imediatamente.
 
 		* Você deve podar as hortênsias assim que sua floração tiver terminado.',
-  img_url: 'https://tudojardim.com/wp-content/uploads/2020/09/22-planta-ornamental-hort%C3%AAnsia.jpg'
+  img_url: 'https://tudojardim.com/wp-content/uploads/2020/09/22-planta-ornamental-hort%C3%AAnsia.jpg',
+  toxic: true
 )
 
 
@@ -205,7 +223,8 @@ Plant.create!(
   infos: '* Em climas quentes, as begônias florescem durante todo o ano, com flores brancas, amarelas, rosadas ou vermelhas. Suas folhas também são altamente ornamentais.
 
 		* Intercalando entre a aparência bonita das folhas e flores, plantá-las requer um pouco de conhecimento para mantê-las com a melhor aparência e expô-las dentro de sua residência.',
-  img_url: 'https://casa.abril.com.br/wp-content/uploads/2022/01/Begonia-conheca-os-diferentes-tipos-e-como-cuidar-em-casa-14.jpg?resize=630,840'
+  img_url: 'https://casa.abril.com.br/wp-content/uploads/2022/01/Begonia-conheca-os-diferentes-tipos-e-como-cuidar-em-casa-14.jpg?resize=630,840',
+  toxic: true
 )
 
 
@@ -220,7 +239,8 @@ Plant.create!(
 		* Plante a rosa flor em média seis semanas antes da primavera. Isso garante que as rosas crescem rapidamente.
 
 		* Elas também são bem eficientes em algumas enfermidades. Por exemplo, a rosa branca é ótima para ajudar na recuperação de inflamação nos olhos e prisão de ventre infantil.',
-  img_url: 'https://i.pinimg.com/originals/13/5c/ac/135cac087a7e5126b7c44d7d69b0aece.jpg'
+  img_url: 'https://i.pinimg.com/originals/13/5c/ac/135cac087a7e5126b7c44d7d69b0aece.jpg',
+  toxic: true
 )
 
 
@@ -235,7 +255,8 @@ Plant.create!(
 		* Depois que as flores morrerem, continue regando o lírio por mais três meses.
 
 		* Por serem flores de jardim, é recomendado que elas sejam plantadas diretamente no solo em canteiros ou em vasos grandes que, consequentemente, acabam durando mais tempo.',
-  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2019/01/lirio-33.jpg'
+  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2019/01/lirio-33.jpg',
+  toxic: true
 )
 
 
@@ -250,7 +271,8 @@ Plant.create!(
 		* A lavanda pode ser plantada em locais que tem alta temperatura e que passe por geadas, pois ela é resistente .
 
 		* Para estimular o crescimento, faça a poda acima de três dedos da bifurcação de cada talo, todos os anos, no outono. Sempre retire as plantas invasoras que podem competir por nutrientes.',
-  img_url: 'https://casa.abril.com.br/wp-content/uploads/2020/11/vaso-com-lavanda-larissa-birta.jpg?resize=630,944'
+  img_url: 'https://casa.abril.com.br/wp-content/uploads/2020/11/vaso-com-lavanda-larissa-birta.jpg?resize=630,944',
+  toxic: false
 )
 
 Plant.create!(
@@ -264,7 +286,8 @@ Plant.create!(
 		* As Margaridas são flores múltiplas, cheias de diversidade que conferem a cada variedade um brilho próprio.
 
 		* Também é conhecida como malmequer, crisântemo, bem-me-quer, bonina, margarita, margarita-maior, malmequer-maior, malmequer-bravo, e olho-de-boi. O nome desta flor vem do latim margarita, que significa pérola.',
-  img_url: 'https://www.picturethisai.com/wiki-image/1080/7A6FD8E8AD9642B7920CB896BC84FA15.jpeg'
+  img_url: 'https://www.picturethisai.com/wiki-image/1080/7A6FD8E8AD9642B7920CB896BC84FA15.jpeg',
+  toxic: true
 )
 
 
@@ -279,7 +302,8 @@ Plant.create!(
 		* A tulipa cortada pode ser mantida por 10 dias.
 
 		* Tulipas são flores ornamentais do gênero de plantas liliáceas, formadas por uma única flor em cada haste, com folhas alongadas, apresentando seis pétalas ou na forma com pétalas dobradas, podendo atingir de 30 a 60 cm de altura.',
-  img_url: 'https://i.pinimg.com/736x/35/02/df/3502df3403a3fc07c38d1e9c4261f075.jpg'
+  img_url: 'https://i.pinimg.com/736x/35/02/df/3502df3403a3fc07c38d1e9c4261f075.jpg',
+  toxic: true
 )
 
 
@@ -295,7 +319,8 @@ Plant.create!(
 		* Você pode ajudar a manter a umidade da planta colocando um pratinho com pedras molhadas no fundo do vaso.
 
 		* A Azaléia foi declarada como flor símbolo da cidade de São Paulo pelo prefeito Jânio Quadros.',
-  img_url: 'https://www.decorfacil.com/wp-content/uploads/2018/02/20180210flor-de-azaleia.jpg'
+  img_url: 'https://www.decorfacil.com/wp-content/uploads/2018/02/20180210flor-de-azaleia.jpg',
+  toxic: true
 )
 
 
@@ -310,7 +335,8 @@ Plant.create!(
 		* De origem europeia, a arruda é uma planta utilizada há séculos pela humanidade. Existem relatos de uso terapêutico da arruda desde os tempos da Grécia Antiga.
 
 		* Apesar de todos os benefícios, a Arruda deve ser manipulada e utilizada com cautela. Isso porque a planta possui um alto grau de toxicidade, especialmente quando administrada internamente, seja na forma de chás, tempero ou em vaporizações.',
-  img_url: 'https://weflores.com/wp-content/uploads/Arruda.jpg'
+  img_url: 'https://weflores.com/wp-content/uploads/Arruda.jpg',
+  toxic: false
 )
 
 Plant.create!(
@@ -324,7 +350,8 @@ Plant.create!(
 		* Tenha cuidado especial com o excesso de umidade, que rapidamente leva ao apodrecimento e morte do cacto-dedal.
 
 		* Tolera estiagem e temperaturas extremas, de calor de até -4º C.',
-  img_url: 'https://i.pinimg.com/originals/83/9f/65/839f65c591adb7126ea03e2df9589d60.jpg'
+  img_url: 'https://i.pinimg.com/originals/83/9f/65/839f65c591adb7126ea03e2df9589d60.jpg',
+  toxic: false
 )
 
 
@@ -339,13 +366,14 @@ Plant.create!(
 		* Com ciclo de vida perene, a floração do cacto amendoim com belas flores vermelhas ocorre na estação do verão, já que se trata de um período de muita luminosidade.
 
 		* O solo ideal para o cacto amendoim é aquele bem drenado e, que apresenta em especial uma porção de terra calcária, pois a presença de cálcio faz com que o cacto amendoim cresça e tenha espinhos viçosos.',
-  img_url: 'https://imagens-revista.vivadecora.com.br/uploads/2022/03/Cacto-amendoim-florido.-Fonte-Suculentas-Love.jpg'
+  img_url: 'https://imagens-revista.vivadecora.com.br/uploads/2022/03/Cacto-amendoim-florido.-Fonte-Suculentas-Love.jpg',
+  toxic: false
 )
 
 
 
 Plant.create!(
-  name: 'Cacto Orelha de Coleho – Palma Brava',
+  name: 'Cacto Orelha de Coelho',
   botanic_name: 'Opuntia microdasys',
   description: 'A palma-brava é um cacto ornamental incrivelmente delicado, cujas palmas elevadas para cima se assemelham às orelhas de um coelho. Mas como todos os cactos, possui espinhos, que são tão finos a ponto de parecerem invisíveis, mas ainda assim são capazes de machucar. É uma planta de pequeno porte normalmente cultivada em vasos sempre sob o sol pleno.',
   water: '1 vez por semana | não encharcar o solo',
@@ -355,7 +383,8 @@ Plant.create!(
 		* Também são resistentes ao calor excessivo se bem que prefiram o clima seco, afinal são originárias de regiões desérticas.
 
 		* Devemos ter cuidado com esta palma, seus espinhos amarelos ou brancos são bastante finos, doloridos e difíceis de remover.',
-  img_url: 'https://http2.mlstatic.com/D_NQ_NP_345115-MLB25158080872_112016-O.jpg'
+  img_url: 'https://http2.mlstatic.com/D_NQ_NP_345115-MLB25158080872_112016-O.jpg',
+  toxic: false
 )
 
 
@@ -370,7 +399,8 @@ Plant.create!(
 		* O cacto mandacaru cresce em um ramo principal vertical e a partir desse caule principal crescem diversas hastes também em direção vertical, paralelas ao ramo principal.
 
 		* Suas flores crescem a até 12 centímetros de diâmetro e seu fruto tem coloração avermelhada, sendo esse um fruto comestível e adocicado, mas incomum no meio comercial.',
-  img_url: 'https://cdn.leroymerlin.com.br/products/cacto_mandacaru_vaso_170cm_89209141_b98b_600x600.jpg'
+  img_url: 'https://cdn.leroymerlin.com.br/products/cacto_mandacaru_vaso_170cm_89209141_b98b_600x600.jpg',
+  toxic: false
 )
 
 
@@ -383,7 +413,8 @@ Plant.create!(
   infos: '* Possuem folhas claras, numerosas e compridas. Suas flores são vermelhas e vibrantes.
 
 		* Ideal para clima quente e seco, essa planta é muito ramificada e possui folhas cilíndricas pequenas, que pode até formar uma roseta na ponta dos talos em época de floração.',
-  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2021/11/suculenta-dedo-de-moca-00.jpg'
+  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2021/11/suculenta-dedo-de-moca-00.jpg',
+  toxic: false
 )
 
 
@@ -396,7 +427,8 @@ Plant.create!(
   infos: '* As suculentas são plantas fascinantes, e todo cultor, mesmo os mais iniciantes, já sabem. Elas são resistentes a longos períodos de seca e se dão muito bem nos climas tropical e subtropical.
 
 		* Recebe o apelido de planta zebra devido às listras de protuberâncias brancas em suas folhas. Ela requer pouca água e fica feliz em ficar longe da luz solar direta.',
-  img_url: 'https://guiadassuculentas.com/wp-content/uploads/2020/09/Suculenta-Zebra-Um-Guia-Completo-Desta-Planta.jpg'
+  img_url: 'https://guiadassuculentas.com/wp-content/uploads/2020/09/Suculenta-Zebra-Um-Guia-Completo-Desta-Planta.jpg',
+  toxic: false
 )
 
 
@@ -409,7 +441,8 @@ Plant.create!(
   infos: ' Tem uma alta capacidade de armazenamento de água e suporta diferentes picos de temperatura, que podem ir dos de 40 ºC até -5 ºC.
 
 		* A rosa de pedra é uma planta baixa. Chega de 10 a 15 cm de altura. Sua paleta de cores está entre o verde-escuro indo para o mais claro e roxo indo para o lilás.',
-  img_url: 'https://t2.uc.ltmcdn.com/pt/posts/4/1/9/como_cuidar_da_suculenta_rosa_de_pedra_28914_600_square.jpg'
+  img_url: 'https://t2.uc.ltmcdn.com/pt/posts/4/1/9/como_cuidar_da_suculenta_rosa_de_pedra_28914_600_square.jpg',
+  toxic: false
 )
 
 
@@ -422,7 +455,8 @@ Plant.create!(
   infos: '* É uma planta ramificada e pode alcançar até 20 cm de altura. Apresenta folhas carnosas quase cilíndricas e muito atrativas.
 
 		* Muito rústica e de fácil cultivo, a espécie aprecia regiões de clima ameno, sendo muito cultivada no Sul e Sudeste do Brasil.',
-  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2020/02/tipos-de-suculenta-4-730x730.jpg'
+  img_url: 'https://www.tuacasa.com.br/wp-content/uploads/2020/02/tipos-de-suculenta-4-730x730.jpg',
+  toxic: false
 )
 
 Plant.create!(
@@ -434,7 +468,8 @@ Plant.create!(
   infos: '* A orquídea chocolate cresce de forma simpodial através de seus pseudobulbos, nos quais crescem firmemente à um comprimento de aproximadamente 8 a 10 cm, com uma circunferência de 5 cm em uma cor verde clara.
 
 		* A cor das flores, que vai de púrpura escuro até amarelo castanho, variando de 2 a 4 cm de diâmetro, possui um aroma doce muito agradável.',
-  img_url: 'https://compremudas.com.br/wp-content/uploads/2021/07/SHARRY-BABY-1-1-510x681.jpg'
+  img_url: 'https://compremudas.com.br/wp-content/uploads/2021/07/SHARRY-BABY-1-1-510x681.jpg',
+  toxic: false
 )
 
 
@@ -447,7 +482,8 @@ Plant.create!(
   infos: '* Brasileira, essa espécie foi descoberta por George Gardner, em 1839, vegetando nos galhos de árvores à margem de um riacho afluente do Rio São Francisco, em Minas Gerais.
 
 		* Considerada a orquídea mais perfeita que existe graças ao equilíbrio e simetria de suas formas.',
-  img_url: 'https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Cattleya-walkeriana-03.jpg'
+  img_url: 'https://minhasplantas.s3.amazonaws.com/media/plantas/galeria/Cattleya-walkeriana-03.jpg',
+  toxic: false
 )
 
 
@@ -460,7 +496,8 @@ Plant.create!(
   infos: '* Com alguns cuidados básicos e essenciais, a Phalaenopsis poderá ter mais de duas florações ao ano, com flores que chegam a durar até três meses, ao contrário de outras espécies que ficam floridas apenas por alguns dias, ou poucas semanas.
 
 		* As Phalaenopsis gostam bastante de ambientes arejados e ventilados, tanto nos substratos quanto nos locais onde são cultivadas.',
-  img_url: 'https://cf.shopee.com.br/file/ee6c63f751635dba4addbf61b3b65bc1'
+  img_url: 'https://cf.shopee.com.br/file/ee6c63f751635dba4addbf61b3b65bc1',
+  toxic: false
 )
 
 
@@ -473,7 +510,8 @@ Plant.create!(
   infos: '* A Orquídea denphal é bastante apreciada por sua distinta floração, já que ela é uma das que mais duram entre na família das orquídeas.
 
 		* Para fazer com que a orquídea denphal floresça todos os anos, é preciso realizar corretamente um processo chamado estresse hídrico. Para realizar esse procedimento, você deve reduzir drasticamente a quantidade de água que a planta recebe durante o período mais frio do ano, no outono e inverno.',
-  img_url: 'https://orquideasblog.com/wp-content/uploads/2018/05/orqu%C3%ADdea-denphal.jpg'
+  img_url: 'https://orquideasblog.com/wp-content/uploads/2018/05/orqu%C3%ADdea-denphal.jpg',
+  toxic: false
 )
 
 
