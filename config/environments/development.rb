@@ -38,7 +38,6 @@ Rails.application.configure do
   # Replacing :local for :cloudinary
   config.active_storage.service = :cloudinary
 
-
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

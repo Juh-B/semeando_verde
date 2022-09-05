@@ -1,9 +1,9 @@
 <div class="back-col">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
-    <%= turbo_frame_tag dom_id(@garden) do %>
+  <%= turbo_frame_tag dom_id(@garden) do %>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @garden.photo.attached? ? cl_image_path(@garden.photo.key) : asset_path('succulent.jpg') %>);" >
       <h1 class='text-center'><strong><%= link_to @garden.name, edit_garden_path(@garden) %></strong></h1>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 
 
   <div class= "plants container">
