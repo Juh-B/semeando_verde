@@ -36,7 +36,7 @@
             <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
             raise
             <%= link_to 'Alterar imagem', edit_garden_plant_path(@garden_plant), class: "btn-add" %>
-            <%= link_to "Alterar no caloud.", edit_garden_plant_path(@garden_plant), class: "btn-add" do %>
+            <%= link_to "Alterar no cloud.", edit_garden_plant_path(@garden_plant), class: "btn-add" do %>
                 <% if @garden_plant.photo.present? %>
                   <%= cl_image_tag(@garden_plant.photo.key, width: 400, height: 300, crop: :fit) %>
                 <% else %>
