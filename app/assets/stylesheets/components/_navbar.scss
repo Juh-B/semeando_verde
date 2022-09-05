@@ -20,6 +20,11 @@
 
 .nav-item{
   display: flex;
+
+  .nav-link {
+      font-family: "Flower", sans-serif;
+      color: black;
+  }
 }
 
 @media (max-width: 540px) {
@@ -33,5 +38,5 @@
 }
 
 .navbar-brand img{
-width: 250px;
+  width: 250px;
 }
