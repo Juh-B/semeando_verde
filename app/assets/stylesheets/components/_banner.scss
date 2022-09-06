@@ -26,3 +26,12 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
+
+.parallax {
+  background-image: url('img_parallax.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
