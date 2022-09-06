@@ -15,6 +15,10 @@
   h5:not(:first-child) {
     margin-top: 2em;
   }
+
+  p:not(:last-child){
+    margin-bottom: 2.5em;
+  }
 }
 
 
@@ -22,6 +26,7 @@
   width: 400px;
   height: 400px;
   border-radius: 15px;
+  margin-bottom: 1rem;
 }
 
 // .mb-2-5rem {
@@ -29,10 +34,10 @@
 // }
 
 .img-btn {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // flex-direction: column;
+  display: flex;
+  // justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
   position: sticky;
   top: 20px;
   height: 40vh;
@@ -62,10 +67,17 @@
 }
 
 .btn-edit {
-  background-color: #1A936F;
-  color: #fff;
-  border: none;
-  width: 60%;
+  // background-color: #1A936F;
+  // color: #fff;
+  color: #1A936F;
+  border: 1px solid #1A936F;
+  // border: none;
+  width: 50%;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 7px 20px;
+  // width: 40%;
+
 }
 
 .check-box {
