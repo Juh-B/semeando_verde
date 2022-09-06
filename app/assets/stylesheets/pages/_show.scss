@@ -48,6 +48,8 @@
   display: inline-block;
   text-decoration: none;
   text-align: center;
+  color: white;
+  background-color: #1a936f;
   font-weight: bold;
   border-radius: 15px;
   padding: 14px 40px;
@@ -118,9 +120,15 @@
   }
 }
 
+
 .card-content {
   margin-left: 35%;
   margin-top: 8%;
+ }
+ 
+// .form-check {
+//   display: flex;
+//   gap: 10px;
 }
 
 .card-flex {
