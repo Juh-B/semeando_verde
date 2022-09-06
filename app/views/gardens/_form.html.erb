@@ -1,0 +1,6 @@
+<%= simple_form_for garden, id:"#{dom_id(garden)}_form" do |f| %>
+  <%= f.input :name, class:"form-control", label: false %>
+  <div class="d-flex justify-content-center w-100">
+    <%= f.submit "Salvar", class:"garden-submit" %>
+  </div>
+<% end %>
