@@ -38,6 +38,6 @@ class GardenPlantsController < ApplicationController
   end
 
   def garden_plant_params
-    params.require(:garden_plant).permit(:notification)
+    params.require(:garden_plant).permit(:notification, :photo)
   end
 end
