@@ -27,7 +27,15 @@
   font-weight: 400;
 }
 
-// Banner info - Plant name - Card Plant
+.parallax {
+  background-image: url('img_parallax.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
 .plant-name {
   text-align: center;
   padding-bottom: 20px;

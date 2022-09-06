@@ -11,6 +11,12 @@
   padding-bottom: 30px;
 }
 
+.font-home {
+  font-family: "Flower", sans-serif;
+  text-decoration: none;
+  font-size: 60px;
+  color: #cf7675;
+}
 
 .imgs-home {
   margin: 120px 0 90px 0;
@@ -18,7 +24,6 @@
   align-items: center;
   height: 160px;
   gap: 30px;
-
 
   .plant-bottom {
     align-self: flex-end;
@@ -42,16 +47,16 @@
   flex-direction: column;
 }
 
-.yellow-color {
-  color: #3e4b41;
+.sun-color {
+  color: #964381;
 }
 
-.blue-color {
-  color: #3e4b41;
+.drop-color {
+  color: #BD1550;
 }
 
-.green-color {
-  color: #3e4b41;
+.leaf-color {
+  color: #642978;
 }
 // section about the utilities
 
@@ -74,32 +79,6 @@
 .utility-card {
   width: 200px;
   padding-top: 15px;
-}
-
-.footer {
-  background: #3e4b41;
-  display: flex;
-  justify-content: space-between;
-  height: 70px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-
-.footer-links a:hover {
-  opacity: 1;
 }
 
 .down-cur {
