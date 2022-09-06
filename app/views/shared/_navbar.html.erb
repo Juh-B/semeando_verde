@@ -16,11 +16,15 @@
             <%= link_to "Pesquisar", plants_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
+          <% if current_user.photo.attached? %>
+            <%# <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, height: 40, width: 40, crop: :fill %>
+            <%= image_tag "https://ca.slack-edge.com/T02NE0241-U027U4H2W76-464c208bbedc-512", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
             <%= image_tag "https://ca.slack-edge.com/T02NE0241-U03NTPJJ8J0-de5860f4c1eb-512", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Cadastro", "#", class: "dropdown-item" %>
-              <%= link_to "Editar perfil", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, method: :delete, class: "dropdown-item" %>
+              <%= link_to "Editar perfil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Sair", destroy_user_session_path, data: {turbo_method: :delete}, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>

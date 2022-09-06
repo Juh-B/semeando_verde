@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :garden
+  has_one :garden, dependent: :destroy
+  has_one_attached :photo
   after_create :user_garden
 
   private
