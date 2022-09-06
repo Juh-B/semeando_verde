@@ -7,3 +7,10 @@
 @import "banner";
 @import "logs";
 @import "form";
+
+body {
+  background-color: #fcf9f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
