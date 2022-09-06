@@ -9,7 +9,7 @@
   <div class= "plants container">
     <% @garden_plants.each do |garden_plant| %>
       <div class="card-product">
-        <%= link_to garden_plant_path(garden_plant), class:"link-card-plant" do %>
+        <%= link_to garden_plant_path(garden_plant) do %>
 
           <h5 class="text-center"><strong><%= garden_plant.plant.name %></strong></h5>
           <img src=<%= garden_plant.plant.img_url %> >
