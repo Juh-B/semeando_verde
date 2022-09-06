@@ -1,7 +1,13 @@
-<%= simple_form_for garden, id:"#{dom_id(garden)}_form" do |f| %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :name, class:"form-control", label: false %>
-  <div class="d-flex justify-content-center w-100">
-    <%= f.submit "Salvar", class:"garden-submit" %>
-  </div>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @garden.photo.attached? ? cl_image_path(@garden.photo.key) : asset_path('succulent.jpg') %>);" >
+  <%= simple_form_for garden, id:"#{dom_id(garden)}_form" do |f| %>
+    <% if params[:field] == "photo" %>
+      <%= f.input :photo, as: :file %>
+    <% else %>
+      <%= f.input :name, class:"form-control", label: false %>
+    <% end %>
+
+    <div class="d-flex justify-content-center w-100">
+      <%= f.submit "Salvar", class:"garden-submit" %>
+    </div>
+  <% end %>
+</div>
