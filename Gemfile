@@ -66,6 +66,8 @@ gem 'open-uri'
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 
+# Gem para testes com o email
+gem 'letter_opener', group: :development
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

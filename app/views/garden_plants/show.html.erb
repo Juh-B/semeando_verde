@@ -1,58 +1,53 @@
 <div class="back-col">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
+  <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
       <div class="plant-name">
         <h1><strong><%= @garden_plant.plant.name %></strong></h1>
           <p><em><small><%= @garden_plant.plant.botanic_name %></em></small></p>
       </div>
   </div>
 
-    <div class="big-ban container">
-      <div>
-        <h5><strong>Descrição</strong></h5>
-          <p class="mb-2-5rem"><%= @garden_plant.plant.description %></p>
+  <div class="big-ban container">
+    <div>
+      <h5 class='icons-show'><i class="fas fa-leaf"></i><strong>Descrição</strong></h5>
+      <p><%= @garden_plant.plant.description %></p>
 
-        <h5><strong>Iluminação</strong></h5>
-          <p class="mb-2-5rem"><%= @garden_plant.plant.lighting %></p>
-        <h5><strong>Regar</strong></h5>
-          <p class="mb-2-5rem"><%= @garden_plant.plant.water %></p>
-        <h5><strong>Tóxica</strong></h5>
-        <p class="mb-2-5rem">
-          <% if @garden_plant.plant.toxic == true %>
-            <strong><%= 'Sim' %></strong>
-          <% else %>
-            <%= 'Não' %>
+      <h5 class='icons-show'><i class="fas fa-sun"></i><strong>Iluminação</strong></h5>
+      <p><%= @garden_plant.plant.lighting %></p>
+
+      <h5 class='icons-show'><i class="fa-solid fa-skull-crossbones"></i><strong>Tóxica</strong></h5>
+      <p>
+        <% if @garden_plant.plant.toxic == true %>
+          <strong><%= 'Sim' %></strong>
+        <% else %>
+          <%= 'Não' %>
         <% end %>
-        </p>
+      </p>
 
-        <h5><strong>Informações</strong></h5>
-          <% @garden_plant.plant.infos.delete("*").split("\n\n").each do |info| %>
-            <ul>
-              <li><%= info %></li>
-            </ul>
-          <% end %>
-      </div>
-        <div class="img-btn">
-          <div class="btn-up">
-            <% if @garden_plant.photo.present? %>
-              <%= cl_image_tag @garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
-            <% else %>
-              <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
-            <% end %>
+      <h5 class='icons-show'><i class="fa-solid fa-circle-info"></i><strong>Informações</strong></h5>
+      <% @garden_plant.plant.infos.delete("*").split("\n\n").each do |info| %>
+        <ul>
+          <li><%= info %></li>
+        </ul>
+      <% end %>
 
-            <%= link_to 'Alterar imagem', edit_garden_plant_path(@garden_plant), class: "btn-add" %>
+      <h5 class='icons-show'><i class="fas fa-tint"></i><strong>Regar</strong></h5>
+      <%= simple_form_for @garden_plant do |f| %>
+        <p><%= f.check_box :notification, class: 'check-box' %> Me notifique <%= @garden_plant.plant.water.downcase %></p>
+        <%= f.submit 'Salvar', class: 'btn-all btn-save' %>
+        <%= link_to 'Deletar', garden_plant_path(@garden_plant), data: { turbo_method: :delete, turbo_confirm: "Deseja deletar essa planta em seu jardim?" }, class: "btn-all btn-delete" %>
+      <% end %>
 
-          </div>
-
-          <div class="form-check form-switch">
-            <%= simple_form_for @garden_plant do |f| %>
-              Gostaria de receber notificações?
-              <%= f.input :notification, label: false %>
-              <p><%= f.submit 'Aplicar', class: 'btn btn-outline-dark btn-sm' %></p>
-            <% end %>
-        </div>
-          <%= link_to 'Deletar', garden_plant_path(@garden_plant), data: { turbo_method: :delete, turbo_confirm: "Deseja deletar essa planta em seu jardim?" }, class: "btn-add" %>
-        </div>
     </div>
-</div>
 
-<%# plant_garden_plants_path %>
+    <div class="img-btn">
+      <% if @garden_plant.photo.present? %>
+        <%= cl_image_tag @garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
+      <% else %>
+        <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
+      <% end %>
+      <%= link_to 'Alterar imagem', plant_garden_plants_path(@garden_plant), data: { turbo_method: :post, turbo_confirm: "Deseja alterar essa planta em seu jardim?" }, class: "btn-all btn-edit" %>
+    </div>
+
+  </div>
+
+</div>

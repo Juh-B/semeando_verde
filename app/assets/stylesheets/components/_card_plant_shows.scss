@@ -1,0 +1,39 @@
+.big-ban {
+  position: relative;
+  top: -120px;
+  background: #E9FFE1;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  gap: 5rem;
+  padding: 5rem;
+
+  h5:not(:first-child) {
+    margin-top: 2em;
+  }
+
+  p, li {
+    color: #787878;
+  }
+
+  p:not(:last-child){
+    margin-bottom: 2.5em;
+  }
+}
+
+.img-ban {
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.img-btn {
+  display: flex;
+  // justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  position: sticky;
+  top: 20px;
+  height: 40vh;
+}
