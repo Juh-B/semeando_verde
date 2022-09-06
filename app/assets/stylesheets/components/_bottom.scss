@@ -1,0 +1,29 @@
+// Bottons
+.btn-all {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 14px 40px;
+  width: 40%;
+  transition-duration: 0.4s;
+}
+
+.btn-save {
+  background-color: #1A936F;
+  color: #fff;
+  border: none;
+}
+
+.btn-delete {
+  color: #cc6f6e;
+  border: 1px solid #cc6f6e;
+}
+
+.btn-edit {
+  background-color: #1A936F;
+  color: #fff;
+  border: none;
+  width: 60%;
+}

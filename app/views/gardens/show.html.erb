@@ -8,21 +8,24 @@
 
   <div class= "plants container">
     <% @garden_plants.each do |garden_plant| %>
+      <div class="card-product">
+        <%= link_to garden_plant_path(garden_plant), class:"link-card-plant" do %>
 
-      <%= link_to garden_plant_path(garden_plant), class:"link-card-plant" do %>
+          <h5 class="text-center"><strong><%= garden_plant.plant.name %></strong></h5>
+          <img src=<%= garden_plant.plant.img_url %> >
 
-        <div class="card-product">
-          <h5 class="card-title mb-2"><strong><%= garden_plant.plant.name %></strong></h5>
           <div class="card-content">
-            <img src=<%= garden_plant.plant.img_url %> >
-            <div class="d-flex flex-column">
-            <p><i class="fa-solid fa-sun"></i>
+            <div class="card-flex">
+              <%# Iluminação da planta %>
+              <p><i class="fa-solid fa-sun"></i>
               <% if garden_plant.plant.lighting.include?("pleno") %>
-                  Sol | meia sombra</p>
-                <% else %>
-                  Indireta</p>
-                <% end %>
+                Sol | meia sombra</p>
+              <% else %>
+                Indireta</p>
+              <% end %>
+              <%# Regar - planta %>
               <p><i class="fa-solid fa-droplet"></i> 1x por semana</p>
+              <%# Toxica ou não %>
               <% if garden_plant.plant.toxic == false %>
                 <p><i class="fa-solid fa-dog"></i> Não tóxica</p>
               <% else %>
@@ -30,8 +33,8 @@
               <% end %>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

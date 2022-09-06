@@ -13,7 +13,6 @@ class User < ApplicationRecord
     garden = Garden.new
     garden.user = self
     garden.name = "Meu Jardim"
-    
     garden.save
 
     # garden_plant = GardenPlant.new
@@ -23,5 +22,4 @@ class User < ApplicationRecord
 
     # garden_plant.save
   end
-
 end
