@@ -9,14 +9,13 @@
     <div class="big-ban container">
       <div>
         <h5><strong>Descrição</strong></h5>
-          <p class="mb-2-5rem"><%= @garden_plant.plant.description %></p>
+          <p class=""><%= @garden_plant.plant.description %></p>
 
         <h5><strong>Iluminação</strong></h5>
-          <p class="mb-2-5rem"><%= @garden_plant.plant.lighting %></p>
-        <h5><strong>Regar</strong></h5>
-          <p class="mb-2-5rem"><%= @garden_plant.plant.water %></p>
+          <p class=""><%= @garden_plant.plant.lighting %></p>
+
         <h5><strong>Tóxica</strong></h5>
-        <p class="mb-2-5rem">
+        <p class="">
           <% if @garden_plant.plant.toxic == true %>
             <strong><%= 'Sim' %></strong>
           <% else %>
@@ -30,19 +29,23 @@
               <li><%= info %></li>
             </ul>
           <% end %>
+
+          <h5><strong>Regar</strong></h5>
+          <%= simple_form_for @garden_plant do |f| %>
+          <p class=""><%= f.check_box :notification %>Me notifique <%= @garden_plant.plant.water.downcase %></p>
+              <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+              <% end %>
       </div>
+
+
+
         <div class="img-btn">
           <div class="btn-up">
             <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
             <%= link_to 'Alterar imagem', plant_garden_plants_path(@garden_plant), data: { turbo_method: :post, turbo_confirm: "Deseja alterar essa planta em seu jardim?" }, class: "btn-add" %>
           </div>
-          <div class="form-check form-switch">
-            <%= simple_form_for @garden_plant do |f| %>
-              Gostaria de receber notificações?
-              <%= f.input :notification, label: false %>
-              <p><%= f.submit 'Aplicar', class: 'btn btn-outline-dark btn-sm' %></p>
-            <% end %>
-        </div>
+
+
           <%= link_to 'Deletar', garden_plant_path(@garden_plant), data: { turbo_method: :delete, turbo_confirm: "Deseja deletar essa planta em seu jardim?" }, class: "btn-add" %>
         </div>
     </div>

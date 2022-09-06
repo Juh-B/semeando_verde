@@ -12,16 +12,17 @@
   align-items: center;
   .search{
     margin: 30px;
-    margin-bottom: 600px;
+    margin-bottom: 785px;
     width: 350px;
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+
   }
 }
 
 .grid-card {
   flex-direction: column;
   justify-content: space-around;
-  margin-top: -200px;
+  margin-top: -435px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 850px;
@@ -30,7 +31,7 @@
   background-color:#d5e6d7;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem;
 
   .plant-card{
@@ -41,6 +42,7 @@
    text-align: center;
 
     img {
+      margin-bottom: 10px;
       border-radius: 15px;
       box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
     }
