@@ -11,13 +11,19 @@
   padding-bottom: 30px;
 }
 
+.font-home {
+  font-family: "Flower", sans-serif;
+  text-decoration: none;
+  font-size: 60px;
+  color: #cf7675;
+}
+
 .imgs-home {
   margin: 120px 0 90px 0;
   display: flex;
   align-items: center;
   height: 160px;
   gap: 30px;
-
 
   .plant-bottom {
     align-self: flex-end;
@@ -41,16 +47,16 @@
   flex-direction: column;
 }
 
-.yellow-color {
-  color: #3e4b41;
+.sun-color {
+  color: #964381;
 }
 
-.blue-color {
-  color: #3e4b41;
+.drop-color {
+  color: #BD1550;
 }
 
-.green-color {
-  color: #3e4b41;
+.leaf-color {
+  color: #642978;
 }
 
 // section about the utilities
