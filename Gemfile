@@ -62,6 +62,11 @@ gem "devise"
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'open-uri'
 
+# Cloudinary
+gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
+
+# Gem para testes com o email
 gem 'letter_opener', group: :development
 
 group :development, :test do
