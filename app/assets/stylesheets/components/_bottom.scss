@@ -3,6 +3,8 @@
   display: inline-block;
   text-decoration: none;
   text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   border-radius: 15px;
   padding: 14px 40px;
@@ -22,8 +24,14 @@
 }
 
 .btn-edit {
-  background-color: #1A936F;
-  color: #fff;
-  border: none;
-  width: 60%;
+  color: #1A936F;
+  border: 1px solid #1A936F;
+  width: 50%;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 7px 20px;
 }
+
+// .check-box {
+//   background-color: #1A936F;
+// }

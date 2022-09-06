@@ -1,4 +1,4 @@
-  <div class="parallax banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" ></div>
+  <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" ></div>
     <div class="fundo">
       <div class="search">
           <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
@@ -11,15 +11,18 @@
           <% end %>
       </div>
 
-      <div class="grid-card">
-        <% @plants.each do |plant| %>
-          <div class="plant-card">
-            <a href="<%=plant_path(plant)%>">
-              <%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %>
-            </a>
-              <h5 class="card-title"><%= plant.name %></h5>
-          </div>
-        <% end %>
+
+
+
+  <div class="grid-card">
+    <% @plants.each do |plant| %>
+      <div class="plant-card">
+        <a href="<%=plant_path(plant)%>">
+          <%= image_tag plant.img_url , width: 150, height: 150, alt: plant.name %>
+        </a>
+        <h5 class="card-title"><%= plant.name %></h5>
       </div>
-    </div>
+    <% end %>
+  </div>
 </div>
+
