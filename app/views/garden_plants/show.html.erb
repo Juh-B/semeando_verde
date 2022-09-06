@@ -8,13 +8,13 @@
 
   <div class="big-ban container">
     <div>
-      <h5><strong>Descrição</strong></h5>
+      <h5 class='icons-show'><i class="fas fa-leaf"></i><strong>Descrição</strong></h5>
       <p><%= @garden_plant.plant.description %></p>
 
-      <h5><strong>Iluminação</strong></h5>
+      <h5 class='icons-show'><i class="fas fa-sun"></i><strong>Iluminação</strong></h5>
       <p><%= @garden_plant.plant.lighting %></p>
 
-      <h5><strong>Tóxica</strong></h5>
+      <h5 class='icons-show'><i class="fa-solid fa-skull-crossbones"></i><strong>Tóxica</strong></h5>
       <p>
         <% if @garden_plant.plant.toxic == true %>
           <strong><%= 'Sim' %></strong>
@@ -23,14 +23,14 @@
         <% end %>
       </p>
 
-      <h5><strong>Informações</strong></h5>
+      <h5 class='icons-show'><i class="fa-solid fa-circle-info"></i><strong>Informações</strong></h5>
       <% @garden_plant.plant.infos.delete("*").split("\n\n").each do |info| %>
         <ul>
           <li><%= info %></li>
         </ul>
       <% end %>
 
-      <h5><strong>Regar</strong></h5>
+      <h5 class='icons-show'><i class="fas fa-tint"></i><strong>Regar</strong></h5>
       <%= simple_form_for @garden_plant do |f| %>
         <p><%= f.check_box :notification, class: 'check-box' %> Me notifique <%= @garden_plant.plant.water.downcase %></p>
         <%= f.submit 'Salvar', class: 'btn-all btn-save' %>
