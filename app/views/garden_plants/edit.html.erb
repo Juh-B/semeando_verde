@@ -1,5 +1,4 @@
-
-<%= simple_form_for @garden_plant do |f| %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit class: 'btn btn-outline-dark' %>
+<%= turbo_frame_tag dom_id(@garden_plant) do %>
+  <%# <%= render "modal", garden_plant: @garden_plant %>
+  <%= render "form", garden_plant: @garden_plant %>
 <% end %>

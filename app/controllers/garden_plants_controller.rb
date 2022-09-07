@@ -19,10 +19,13 @@ class GardenPlantsController < ApplicationController
   end
 
   def update
-    if @garden_plant.update(garden_plant_params)
-      redirect_to garden_path(current_user.garden)
-    else
-      render :edit, status: :unprocessable_entity
+    respond_to do |format|
+      if @garden_plant.update(garden_plant_params)
+        format.html { redirect_to garden_plant_url(@garden_plant) }
+      else
+        format.turbo_stream { render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@garden_plant)}_form", partial: "form", locals: { garden_plant: @garden_plant }) }
+        format.html { render :edit, status: :unprocessable_entity }
+      end
     end
   end
 
