@@ -1,8 +1,9 @@
 <div class="back-col">
   <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
-      <div class="plant-name">
-        <div><%= @garden_plant.plant.botanic_name %><p><em><small>Coloque o nome do seu jardim</em></small></p></div>
-      </div>
+    <div class="plant-name">
+      <h1><strong><%= @garden_plant.plant.name %></strong></h1>
+      <p><em><small><%= @garden_plant.plant.botanic_name %></em></small></p>
+    </div>
   </div>
 
   <div class="big-ban container">
