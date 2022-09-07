@@ -1,9 +1,9 @@
 <div class="back-col">
   <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
-      <div class="plant-name">
-        <h1><strong><%= @garden_plant.plant.name %></strong></h1>
-          <p><em><small><%= @garden_plant.plant.botanic_name %></em></small></p>
-      </div>
+    <div class="plant-name">
+      <h1><strong><%= @garden_plant.plant.name %></strong></h1>
+      <p><em><small><%= @garden_plant.plant.botanic_name %></em></small></p>
+    </div>
   </div>
 
   <div class="big-ban container">
@@ -34,11 +34,10 @@
 
       <h5 class='icons-show'><i class="fas fa-tint"></i><strong>Regar</strong></h5>
       <%= simple_form_for @garden_plant do |f| %>
-        <p class='rega'><%= f.check_box :notification, class: 'check-box' %> Me notifique <%= @garden_plant.plant.water.downcase %></p>
+        <p class='rega'><%= f.check_box :notification, class: 'check-box' %> Me notifique! <%= @garden_plant.plant.water.downcase %></p>
         <%= f.submit 'Salvar', class: 'btn-all btn-save' %>
         <%= link_to 'Deletar', garden_plant_path(@garden_plant), data: { turbo_method: :delete, turbo_confirm: "Deseja deletar essa planta em seu jardim?" }, class: "btn-all btn-delete" %>
       <% end %>
-
     </div>
 
     <div class="img-btn">

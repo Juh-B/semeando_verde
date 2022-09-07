@@ -1,10 +1,11 @@
 <div class="back-col">
   <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
-      <div class="plant-name">
-        <h1><strong><%= @plant.name %></strong></h1>
-          <p><em><small><%= @plant.botanic_name %></em></small></p>
-      </div>
+    <div class="plant-name">
+      <h1><strong><%= @plant.name %></strong></h1>
+      <p><em><small><%= @plant.botanic_name %></em></small></p>
+    </div>
   </div>
+
     <div class="big-ban container">
       <div>
         <h5 class='icons-show'><i class="fas fa-leaf"></i><strong>Descrição</strong></h5>
@@ -31,6 +32,7 @@
         <div class="img-btn">
             <img src=<%= @plant.img_url %> class="img-ban">
             <%= link_to 'Adicionar', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-all btn-save " %>
+
         </div>
     </div>
 </div>

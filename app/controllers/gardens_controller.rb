@@ -1,5 +1,6 @@
 class GardensController < ApplicationController
   # before_action :set_garden, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, only: :order_plants
 
   def show
     @garden = current_user.garden
@@ -19,6 +20,12 @@ class GardensController < ApplicationController
         format.turbo_stream { render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@garden)}_form", partial: "form", locals: { garden: @garden }) }
         format.html { render :edit, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def order_plants
+    params[:orders].each_with_index do |id, index|
+      GardenPlant.find(id).update(order: index)
     end
   end
 

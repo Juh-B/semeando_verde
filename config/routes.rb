@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :gardens, only: %I[show edit update]
+  patch "garden/:id/order_plants", to: "gardens#order_plants"
 
   resources :plants, only: %I[index show] do
     resources :garden_plants, only: :create

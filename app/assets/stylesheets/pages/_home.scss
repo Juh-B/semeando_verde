@@ -14,7 +14,7 @@
 .font-home {
   font-family: "Flower", sans-serif;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 70px;
   color: #cf7675;
 }
 
@@ -79,4 +79,39 @@
 .utility-card {
   width: 200px;
   padding-top: 15px;
+}
+
+
+.photo-about{
+  width: 150px;
+  border-radius: 50%;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+.nome-about{
+  margin-top: 14px;
+  font-style: italic;
+  color: #BD1550;
+  padding-top: 5px;
+}
+
+.icon-about{
+  color: #642978;
+  opacity: 0.7;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 8px;
+}
+
+.logo-about{
+  width: 70px;
+}
+
+.texto-home{
+  font-size: large;
 }

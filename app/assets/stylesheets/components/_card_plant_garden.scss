@@ -12,9 +12,9 @@
 }
 
 .card-product {
-  background-color:#ADE4B5;
+  background-color:#E9FFE1;
   position: relative;
-  height: 220px;
+  height: 230px;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
@@ -30,7 +30,7 @@
     border-radius: 15px;
     object-fit: cover;
     position: absolute;
-    left: -15%;
+    left: -10%;
   }
 }
 
@@ -45,4 +45,7 @@
   justify-content: center;
 }
 
+.name-plant{
+  color: #1a936f
+}
 

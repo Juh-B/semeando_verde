@@ -9,12 +9,12 @@
   <% end %>
 
 
-  <div class= "plants container">
-    <% @garden_plants.each do |garden_plant| %>
-      <div class="card-product">
+  <div class= "plants container" data-controller="sortable" data-sortable-id-value="<%= @garden.id %>">
+    <% @garden_plants.order(:order).each do |garden_plant| %>
+      <div class="card-product" data-id="<%= garden_plant.id %>" data-sortable-target="plant">
         <%= link_to garden_plant_path(garden_plant) do %>
 
-          <h5 class="text-center"><strong><%= garden_plant.plant.name %></strong></h5>
+          <h5 class="text-center name-plant"><strong><%= garden_plant.plant.name %></strong></h5>
           <% if garden_plant.photo.present? %>
             <%= cl_image_tag garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
           <% else %>
