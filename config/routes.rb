@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   end
 
   resources :garden_plants, only: %i[destroy edit update show]
+
+  get '/garden_plants/:id/notification_rega', to: 'garden_plants#notification_rega', as: 'notification_rega'
 end

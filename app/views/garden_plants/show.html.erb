@@ -8,7 +8,9 @@
 
   <div class="big-ban container">
     <div>
-      <h5 class='icons-show'><i class="fas fa-leaf"></i><strong>Descrição</strong></h5>
+      <%= link_to notification_rega_path(@garden_plant), class: 'text-decoration-none' do %>
+        <h5 class='icons-show'><i class="fas fa-leaf"></i><strong>Descrição</strong></h5>
+      <% end %>
       <p><%= @garden_plant.plant.description %></p>
 
       <h5 class='icons-show'><i class="fas fa-sun"></i><strong>Iluminação</strong></h5>
@@ -17,9 +19,9 @@
       <h5 class='icons-show'><i class="fa-solid fa-skull-crossbones"></i><strong>Tóxica</strong></h5>
       <p>
         <% if @garden_plant.plant.toxic == true %>
-          <strong><%= 'Sim' %></strong>
+          <strong class='toxic'><%= 'Sim' %></strong>
         <% else %>
-          <%= 'Não' %>
+          <strong class='no-toxic'><%= 'Não' %></strong>
         <% end %>
       </p>
 
@@ -32,7 +34,7 @@
 
       <h5 class='icons-show'><i class="fas fa-tint"></i><strong>Regar</strong></h5>
       <%= simple_form_for @garden_plant do |f| %>
-        <p><%= f.check_box :notification, class: 'check-box' %> Me notifique <%= @garden_plant.plant.water.downcase %></p>
+        <p class='rega'><%= f.check_box :notification, class: 'check-box' %> Me notifique <%= @garden_plant.plant.water.downcase %></p>
         <%= f.submit 'Salvar', class: 'btn-all btn-save' %>
         <%= link_to 'Deletar', garden_plant_path(@garden_plant), data: { turbo_method: :delete, turbo_confirm: "Deseja deletar essa planta em seu jardim?" }, class: "btn-all btn-delete" %>
       <% end %>
