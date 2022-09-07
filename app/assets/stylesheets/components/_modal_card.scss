@@ -1,0 +1,34 @@
+.modal-card {
+  background-color: #fff;
+  margin: 50vh auto;
+  max-height: 60vh;
+  width: 600px;
+  overflow-y: auto;
+  padding: 1.5rem 2.5rem;
+  // Display & Position
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.transparent-overlay {
+  height: 100%;
+  // width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// DARK BACKGROUND
+.dark-transparent-background {
+  background-color: #fff;
+}

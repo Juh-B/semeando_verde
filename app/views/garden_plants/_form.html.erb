@@ -1,6 +1,7 @@
-<div class="img-ban-form" style="background-image: url(<%= @garden_plant.photo.attached? ? cl_image_path(@garden_plant.photo.key) : @garden_plant.plant.img_url %>);" >
+<%# <div class="img-ban-form" style="background-image: url(<%= @garden_plant.photo.attached? ? cl_image_path(@garden_plant.photo.key) : @garden_plant.plant.img_url %>
+
   <%= simple_form_for garden_plant, id:"#{dom_id(garden_plant)}_form" do |f| %>
     <%= f.input :photo, as: :file, label: false %>
-    <%= f.submit class: 'btn-all btn-save' %>
+    <%= f.submit "", class: 'btn-all btn-save' %>
   <% end %>
-</div>
+<%# </div> %>

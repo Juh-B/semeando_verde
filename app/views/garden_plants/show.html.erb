@@ -42,7 +42,7 @@
     </div>
 
     <div class="img-btn">
-      <%= turbo_frame_tag dom_id(@garden_plant) do %>
+      <%= turbo_frame_tag "modal" do %>
         <div class="img-flex">
           <% if @garden_plant.photo.present? %>
             <%= cl_image_tag @garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
