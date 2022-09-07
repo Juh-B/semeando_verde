@@ -43,3 +43,5 @@
 .env*
 .env*
 .history
+.env*
+.env*
