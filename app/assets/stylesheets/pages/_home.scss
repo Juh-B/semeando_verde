@@ -52,7 +52,7 @@
 }
 
 .drop-color {
-  color: #BD1550;
+  color: #BD1550#BD1550;
 }
 
 .leaf-color {
@@ -79,4 +79,35 @@
 .utility-card {
   width: 200px;
   padding-top: 15px;
+}
+
+
+.photo-about{
+  width: 150px;
+  border-radius: 50%;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+h5{
+  margin-top: 14px;
+  font-style: italic;
+  color: #BD1550;
+  padding-top: 5px;
+}
+
+.icon-about{
+  color: #642978;
+  opacity: 0.7;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 8px;
+}
+
+.logo-about{
+  width: 55px;
 }
