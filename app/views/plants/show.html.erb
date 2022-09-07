@@ -1,5 +1,5 @@
 <div class="back-col">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
+  <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'succulent.jpg' %>);" >
       <div class="plant-name">
         <h1><strong><%= @plant.name %></strong></h1>
           <p><em><small><%= @plant.botanic_name %></em></small></p>
@@ -7,21 +7,21 @@
   </div>
     <div class="big-ban container">
       <div>
-        <h5><strong>Descrição</strong></h5>
+        <h5 class='icons-show'><i class="fas fa-leaf"></i><strong>Descrição</strong></h5>
           <p class="mb-2-5rem"><%= @plant.description %></p>
-        <h5><strong>Iluminação</strong></h5>
+        <h5 class='icons-show'><i class="fas fa-sun"></i><strong>Iluminação</strong></h5>
           <p class="mb-2-5rem"><%= @plant.lighting %></p>
-        <h5><strong>Regar</strong></h5>
+        <h5 class='icons-show'><i class="fas fa-tint"></i><strong>Regar</strong></h5>
           <p class="mb-2-5rem"><%= @plant.water %></p>
-        <h5><strong>Tóxica</strong></h5>
-        <p class="mb-2-5rem">
-          <% if @plant.toxic == true %>
-            <%= 'Sim' %>
-          <% else %>
-            <%= 'Não' %>
-        <% end %>
-          </p>
-        <h5><strong>Informações</strong></h5>
+        <h5 class='icons-show'><i class="fa-solid fa-skull-crossbones"></i><strong> Tóxica</strong></h5>
+          <p class="mb-2-5rem">
+            <% if @plant.toxic == true %>
+              <strong class='toxic'><%= 'Sim' %></strong>
+            <% else %>
+              <strong class='no-toxic'><%= 'Não' %></strong>
+          <% end %>
+            </p>
+        <h5 class='icons-show'><i class="fa-solid fa-circle-info"></i><strong>Informações</strong></h5>
           <% @plant.infos.delete("*").split("\n\n").each do |info| %>
             <ul>
               <li><%= info %></li>
