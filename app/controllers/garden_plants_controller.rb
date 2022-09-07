@@ -1,5 +1,5 @@
 class GardenPlantsController < ApplicationController
-  before_action :set_garden_plant, only: %i[show edit update destroy]
+  before_action :set_garden_plant, only: %i[show edit update destroy notification_rega]
 
   def show
   end
@@ -31,6 +31,11 @@ class GardenPlantsController < ApplicationController
     redirect_to garden_path(current_user.garden), status: :see_other
   end
 
+  def notification_rega
+    NotificationMailer.with(garden_plant: @garden_plant).rega.deliver_now
+    redirect_to garden_plant_path(@garden_plant), status: :see_other
+  end
+
   private
 
   def set_garden_plant
@@ -38,6 +43,6 @@ class GardenPlantsController < ApplicationController
   end
 
   def garden_plant_params
-    params.require(:garden_plant).permit(:notification)
+    params.require(:garden_plant).permit(:notification, :photo)
   end
 end

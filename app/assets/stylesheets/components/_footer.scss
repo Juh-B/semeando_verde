@@ -1,0 +1,82 @@
+.footer {
+  background-color: #bfbba6;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.down-cur {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ .loader {
+  --s: 30px; /* control the size */
+  --b: 15px; /* control the border thickness */
+
+  width: calc(8*var(--s));
+  aspect-ratio: 4;
+  display: grid;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background:
+    linear-gradient(#BD1550 50%,#964381 0) no-repeat,
+    linear-gradient(#f636a5 50%,#642978 0) no-repeat;
+  background-size: 50% 200%;
+  --_g: calc(-.45*var(--s)), #0000 calc(99% - var(--b)),#000 calc(101% - var(--b)) 99%,#0000 101%;
+  --_s: calc(4*var(--s)) var(--s) repeat-x;
+  --_r: calc(1.096*var(--s) + var(--b)/2);
+  -webkit-mask:
+    radial-gradient(var(--_r) at left 50% bottom var(--_g))
+      calc(50% - 2*var(--s)) calc(50% - var(--s)/2)/var(--_s),
+    radial-gradient(var(--_r) at left 50% top    var(--_g))
+      50%                    calc(50% + var(--s)/2)/var(--_s);
+  animation:
+    back 6s   infinite steps(1),
+    load 1.5s infinite linear alternate;
+}
+
+.loader::after {
+  transform: scaleY(-1);
+  animation-delay: -1.5s;
+}
+
+@keyframes load {
+  0%{clip-path: inset(0 75% 0 0)}
+  to{clip-path: inset(0 0 0 75%)}
+}
+
+@keyframes back {
+  0%,
+  100%{background-position: 0%   0%,100% 0%  }
+  25% {background-position: 0% 100%,100% 0%  }
+  50% {background-position: 0% 100%,100% 100%}
+  75% {background-position: 0%   0%,100% 100%}
+}

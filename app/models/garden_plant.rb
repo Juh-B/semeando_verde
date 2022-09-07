@@ -1,8 +1,8 @@
 class GardenPlant < ApplicationRecord
   belongs_to :garden
   belongs_to :plant
-  # has_one_attached :photo
 
+  has_one_attached :photo
   after_update :send_mail
 
   def send_mail
