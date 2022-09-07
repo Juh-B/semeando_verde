@@ -17,8 +17,8 @@ Plant.create!(
   name: 'Samambaia – Americana',
   botanic_name: 'Nephrolepis exaltata',
   description: 'Quem nunca viu uma samambaia presa a um toco de xaxim no quintal da vizinha, tia ou avó? Embora suas variedades apresentem tamanhos, cores e texturas diferentes, a Samambaia-americana ainda é uma das plantas ornamentais mais vendidas no Brasil.',
-  water: 'Manter úmido, sem acúmulo de água',
-  lighting: 'Luz solar filtrada | Indireta',
+  water: 'Manter úmido, sem acúmulo de água.',
+  lighting: 'Luz solar filtrada | Indireta.',
   infos: '* Samambaia-americana é uma planta perfeita para crescer em cestos ou vasos suspensos. Ele pode prosperar em uma temperatura mais quente com umidade contínua.
 
 * Durante o inverno, o regime de rega deve ser menos frequente. Isso significa que a planta deve ser regada quando a parte superior do solo estiver seca, para imitar as condições naturais de dormência.
@@ -46,7 +46,7 @@ Plant.create!(
 )
 
 Plant.create!(
-  name: 'Zamiocula (Zazá)',
+  name: 'Zamioculca (Zazá)',
   botanic_name: 'Zamioculcas zamiifolia',
   description: 'Com sua folhagem brilhante, a Zamioculca é uma planta muito apreciada para fins ornamentais. Ela requer poucos cuidados e se adapta bem a ambientes internos. Se cultivada do lado de fora, ela tem dificuldade de suportar temperaturas inferiores a 15 ℃.',
   water: '1 vez por semana, sem acúmulo de água',
@@ -375,7 +375,7 @@ Plant.create!(
 Plant.create!(
   name: 'Cacto Orelha de Coelho',
   botanic_name: 'Opuntia microdasys',
-  description: 'A palma-brava é um cacto ornamental incrivelmente delicado, cujas palmas elevadas para cima se assemelham às orelhas de um coelho. Mas como todos os cactos, possui espinhos, que são tão finos a ponto de parecerem invisíveis, mas ainda assim são capazes de machucar. É uma planta de pequeno porte normalmente cultivada em vasos sempre sob o sol pleno.',
+  description: 'A palma-brava é um cacto ornamental incrivelmente delicado, cujas palmas elevadas para cima se assemelham às orelhas de um coelho. Mas, como todos os cactos, possui espinhos, que são tão finos a ponto de parecerem invisíveis, mas, ainda assim, são capazes de machucar. É uma planta de pequeno porte normalmente cultivada em vasos sempre sob o sol pleno.',
   water: '1 vez por semana | não encharcar o solo',
   lighting: 'Sol pleno | meia sombra',
   infos: '* Esse belíssimo cacto pode chegar a uma altura máxima de 20 centímetros, ou seja, um cacto de pequeno porte, ideal para cultivar no jardim ou dentro de casa.
