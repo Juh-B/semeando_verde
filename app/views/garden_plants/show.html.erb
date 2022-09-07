@@ -41,12 +41,16 @@
     </div>
 
     <div class="img-btn">
-      <% if @garden_plant.photo.present? %>
-        <%= cl_image_tag @garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
-      <% else %>
-        <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
+      <%= turbo_frame_tag "modal" do %>
+        <div class="img-flex">
+          <% if @garden_plant.photo.present? %>
+            <%= cl_image_tag @garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
+          <% else %>
+            <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
+          <% end %>
+          <%= link_to '', edit_garden_plant_path(@garden_plant), class: "fa-solid fa-camera camera-icon" %>
+        </div>
       <% end %>
-      <%# <%= link_to 'Alterar imagem', plant_garden_plants_path(@garden_plant), data: { turbo_method: :post, turbo_confirm: "Deseja alterar essa planta em seu jardim?" }, class: "btn-all btn-edit" %>
     </div>
 
   </div>

@@ -1,9 +1,10 @@
 <div class="back-col">
   <%= turbo_frame_tag dom_id(@garden) do %>
     <div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @garden.photo.attached? ? cl_image_path(@garden.photo.key) : asset_path('succulent.jpg') %>);" >
-      <h1 class='text-center'><strong><%= link_to @garden.name, edit_garden_path(@garden, field: "name") %></strong></h1>
-
-      <%= link_to "Editar Foto", edit_garden_path(@garden, field: "photo"), class:"btn btn-primary" %>
+      <div>
+        <h1 class='text-center'><strong><%= link_to @garden.name, edit_garden_path(@garden, field: "name") %></strong></h1>
+        <%= link_to "", edit_garden_path(@garden, field: "photo"), class: "fa-solid fa-camera camera-icon" %>
+      </div>
     </div>
   <% end %>
 

@@ -32,11 +32,29 @@
 }
 
 .img-btn {
-  display: flex;
-  // justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
   position: sticky;
   top: 20px;
   height: 40vh;
+}
+
+.img-flex {
+  align-items: flex-end;
+  display: flex;
+  // justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.img-ban-form {
+  width: 400px;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  background-size: auto;
+
+  // img {
+  //   max-width: 100%;
+  //   max-height: 100%;
+  //   // object-fit: fill;
+  // }
 }
