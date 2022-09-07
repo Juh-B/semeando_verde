@@ -8,9 +8,9 @@
   <% end %>
 
 
-  <div class= "plants container">
-    <% @garden_plants.each do |garden_plant| %>
-      <div class="card-product">
+  <div class= "plants container" data-controller="sortable" data-sortable-id-value="<%= @garden.id %>">
+    <% @garden_plants.order(:order).each do |garden_plant| %>
+      <div class="card-product" data-id="<%= garden_plant.id %>" data-sortable-target="plant">
         <%= link_to garden_plant_path(garden_plant) do %>
 
           <h5 class="text-center"><strong><%= garden_plant.plant.name %></strong></h5>
@@ -19,7 +19,7 @@
           <% else %>
             <img src=<%= garden_plant.plant.img_url %> class="img-ban">
           <% end %>
-          
+
           <div class="card-content">
             <div class="card-flex">
               <%# Iluminação da planta %>
