@@ -2,17 +2,23 @@
   .form-control {
     width: 50%;
     margin: auto;
+    border-radius: 20px;
   }
 
   .inputs {
     border-radius: 15px;
     font-family: 'Poppins';
   }
-
-
 }
 
-.garden-submit{
+.garden-submit {
   width: 150px;
   margin: auto;
+}
+
+#garden_photo {
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  border-color: #1EDD88;
 }
