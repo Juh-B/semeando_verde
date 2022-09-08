@@ -12,18 +12,20 @@
                       input_html: { autocomplete: "nickname" }%>
           <%= f.input :email,
                       required: true,
-                      autofocus: true,
+                      label: "E-mail",
                       input_html: { autocomplete: "email" }%>
           <%= f.input :password,
                       required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      label: "Senha",
+                      hint: ("Minímo #{@minimum_password_length} caracteres" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       required: true,
+                      label: "Confirmar senha",
                       input_html: { autocomplete: "new-password" } %>
 
           <div class="form-actions p-2">
-            <%= f.button :submit, "Sign up" %>
+            <%= f.button :submit, "Cadastrar" %>
           </div>
 
       <%= render "devise/shared/links" %>
