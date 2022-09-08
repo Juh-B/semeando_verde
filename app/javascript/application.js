@@ -4,7 +4,6 @@ import "./controllers"
 import "bootstrap"
 
 import { Application } from "@hotwired/stimulus"
-console.log("hello world")
 
 const application = Application.start()
 

@@ -1,8 +1,10 @@
 <%= turbo_frame_tag "modal" do %>
-  <div id="modal" data-controller="turbo-modal" data-turbo="true">
-    <div class="modal-card transparent-overlay">
-      <i class="fas fa-times modal-close-button" data-action="click->turbo-modal#closeModal" data-modal-layer="modal"></i>
-      <h3>Mude a foto da sua Plantinha</h3>
+  <div id="modal" class="transparent-overlay" data-controller="turbo-modal" data-turbo="true">
+    <div class="modal-card ">
+      <div class="d-flex w-100 justify-content-between">
+        <h3>Mude a foto da sua Plantinha</h3>
+        <i class="fas fa-times modal-close-button align-self-start" data-action="click->turbo-modal#closeModal" data-modal-layer="modal"></i>
+      </div>
       <%= yield %>
     </div>
   </div>
