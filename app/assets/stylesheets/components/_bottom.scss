@@ -88,3 +88,12 @@ input:checked{
 .btn-my-search:hover {
   color: black;
 }
+
+.btn-notification {
+  color: #18936e;
+  border: 1px solid #18936e;
+
+  &:hover {
+    color: #18936e;
+  }
+}
