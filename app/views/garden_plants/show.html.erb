@@ -40,18 +40,19 @@
     </div>
 
     <div class="img-btn">
-      <%= turbo_frame_tag "modal" do %>
+      <%#= turbo_frame_tag "modal" do %>
         <div class="img-flex">
           <% if @garden_plant.photo.present? %>
             <%= cl_image_tag @garden_plant.photo.key, width: 400, height: 300, crop: :fit, class:"img-ban" %>
           <% else %>
             <img src=<%= @garden_plant.plant.img_url %> class="img-ban">
           <% end %>
-          <%= link_to '', edit_garden_plant_path(@garden_plant), class: "fa-solid fa-camera camera-icon" %>
+          <%= link_to '', edit_garden_plant_path(@garden_plant), class: "fa-solid fa-camera camera-icon", data: {turbo_frame: 'modal'} %>
         </div>
-      <% end %>
+      <%# end %>
     </div>
 
   </div>
 
 </div>
+<%= turbo_frame_tag 'modal' %>
