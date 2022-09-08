@@ -34,7 +34,7 @@
 
       <h5 class='icons-show'><i class="fas fa-tint"></i><strong>Regar</strong></h5>
       <%= simple_form_for @garden_plant do |f| %>
-        <p class='rega'><%= f.check_box :notification, class: 'check-box' %> Me notifique! <%= @garden_plant.plant.water.downcase %></p>
+        <p class='rega'><%= f.check_box :notification, id:'check-box', class: 'check-box' %> Receba sua notificação! E, não esqueça: <%= @garden_plant.plant.water.downcase %></p>
         <%= f.submit 'Salvar', class: 'btn-all btn-save' %>
         <%= link_to 'Deletar', garden_plant_path(@garden_plant), data: { turbo_method: :delete, turbo_confirm: "Deseja deletar essa planta em seu jardim?" }, class: "btn-all btn-delete" %>
       <% end %>
