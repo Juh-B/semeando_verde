@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   resources :garden_plants, only: %i[destroy edit update show]
 
   get '/garden_plants/:id/notification_rega', to: 'garden_plants#notification_rega', as: 'notification_rega'
+
+  patch '/garden_plants/:id/toggle_notification', to: 'garden_plants#toggle_notification', as: 'garden_plant_toggle_notification'
 end

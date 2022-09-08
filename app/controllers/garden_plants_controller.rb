@@ -1,5 +1,5 @@
 class GardenPlantsController < ApplicationController
-  before_action :set_garden_plant, only: %i[show edit update destroy notification_rega]
+  before_action :set_garden_plant, only: %i[show edit update destroy notification_rega toggle_notification]
 
   def show
   end
@@ -39,7 +39,15 @@ class GardenPlantsController < ApplicationController
     redirect_to garden_plant_path(@garden_plant), status: :see_other
   end
 
-  
+  def toggle_notification
+    if @garden_plant.notification
+      @garden_plant.update(notification: false)
+    else
+      @garden_plant.update(notification: true)
+      NotificationMailer.with(garden_plant: @garden_plant).notification.deliver_now
+    end
+    redirect_to garden_plant_path(@garden_plant), status: :see_other
+  end
 
   private
 
