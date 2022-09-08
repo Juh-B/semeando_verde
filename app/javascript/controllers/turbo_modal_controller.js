@@ -1,7 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
-    console.log("Hiiiii")
     if (this.element.classList.contains('modal-close')) { this.element.classList.remove('modal-close') }
     this.element.classList.add('modal-open')
     document.addEventListener('turbo:submit-end', this.handleSubmit);
