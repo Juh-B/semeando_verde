@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :garden
+  has_one :garden, dependent: :destroy
+  has_one_attached :photo
   after_create :user_garden
 
   private
@@ -13,7 +14,6 @@ class User < ApplicationRecord
     garden = Garden.new
     garden.user = self
     garden.name = "Meu Jardim"
-    
     garden.save
 
     # garden_plant = GardenPlant.new
@@ -23,5 +23,4 @@ class User < ApplicationRecord
 
     # garden_plant.save
   end
-
 end

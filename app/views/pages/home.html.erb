@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-  <div class="container">
-    <h1> Hiiii </h1>
-  </div>
-</div>
-=======
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'plantinhas.jpg' %>);" >
+<div class="parallax banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'plantinhas.jpg' %>);" >
   <div class="container">
     <h1><strong>Semeando Verde</strong></h1>
     <p>O cuidado que as suas plantinhas merecem.</p>
@@ -13,10 +6,10 @@
 </div>
 
 <div class="color-background">
-  <div class="container pt-5">
-    <h2>Sementinhas de cuidado</h2>
-    <p>Sabe quando você tem uma plantinha linda mas por alguma razão ela começa a morrer? Pois eh! Você veio ao local certo!</p>
-    <p><strong>Ajudamos você a cuidar dela da melhor forma possível!!!</strong></p>
+  <div class="container text-center pt-5">
+    <h2 class="font-home">Sementinhas de cuidado.</h2>
+    <p class="w-50 mx-auto texto-home">Sabe quando você tem uma plantinha linda, mas por alguma razão ela começa a morrer? Pois é, você veio ao local certo!</p>
+    <p class="texto-home"><strong>Ajudamos você a cuidar dela da melhor forma possível!!!</strong></p>
   </div>
   <div class="mid-img container">
     <div class="imgs-home">
@@ -24,46 +17,75 @@
 
         <div class="loader"></div>
 
-        <%= image_tag 'plantaviva.jpg', alt: "planta saúdavel" %>
+        <%= image_tag 'plantaviva.jpg', alt: "planta saudável" %>
     </div>
   </div>
 
-<section class="utilities">
-  <div class="container">
-    <div class="row">
-      <div class="col-4 down-cur">
-        <i class="fas fa-sun fa-2x yellow-color"></i>
-        <h3>Iluminação</h3>
-        <%= image_tag 'line_2.svg', class:'line' %>
-        <p class="text-start">Saiba o quanto de sol a sua planta necessita</p>
-      </div>
+  <section class="utilities">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 down-cur">
+          <i class="fas fa-sun fa-2x sun-color"></i>
+          <h3>Iluminação</h3>
+          <%= image_tag 'line_2.svg', class:'line' %>
+          <p class="text-center w-75">Saiba o quanto de sol a sua planta necessita.</p>
+        </div>
 
-      <div class="col-4 down-cur">
-        <i class="fas fa-tint fa-2x blue-color"></i>
-        <h3>Rega</h3>
-        <%= image_tag 'line_2.svg', class:'line' %>
-        <p class="text-start">Receba lembretes de quando regar-las</p>
-      </div>
+        <div class="col-4 down-cur">
+          <i class="fas fa-tint fa-2x drop-color"></i>
+          <h3>Rega</h3>
+          <%= image_tag 'line_2.svg', class:'line' %>
+          <p class="text-center w-75">Receba lembretes de quando regar as suas plantas.</p>
+        </div>
 
-      <div class="col-4 down-cur">
-        <i class="fas fa-leaf fa-2x green-color"></i>
-        <h3>Curiosidades</h3>
-        <%= image_tag 'line_2.svg', class:'line' %>
-        <p class="text-start">Tenha acesso à curiosidades e informações</p>
+        <div class="col-4 down-cur">
+          <i class="fas fa-leaf fa-2x leaf-color"></i>
+          <h3>Curiosidades</h3>
+          <%= image_tag 'line_2.svg', class:'line' %>
+          <p class="text-center w-75">Tenha acesso à curiosidades e informações.</p>
+        </div>
       </div>
     </div>
-  </div>
- </section>
+  </section>
+
+
+
+  <section class='container'>
+    <hr>
+    <h2 class="font-home mt-5 text-center"><%= image_tag 'foto-about.png', class: 'logo-about'%>Quem faz parte do Semenado Verde ?</h2>
+    <div class='about mt-5'>
+      <div class= 'd-flex flex-column align-items-center'>
+        <%= image_tag 'https://ca.slack-edge.com/T02NE0241-U03P2BZM735-40eb316b957d-512', class: 'photo-about'%>
+        <h5 class='nome-about'>Aurélio Melo</h5>
+        <div>
+          <a href="https://github.com/aureliomelo003" target="_blank"><i class="fab fa-github icon-about"></i></a>
+          <a href="https://www.linkedin.com/in/aurelio-melo" target="_blank"><i class="fab fa-linkedin icon-about" target="_blank"></i></a>
+        </div>
+      </div>
+      <div class= 'd-flex flex-column align-items-center'>
+        <%= image_tag 'https://ca.slack-edge.com/T02NE0241-U03P24KAWR1-e8edc9aac8a1-512', class: 'photo-about'%>
+        <h5 class='nome-about'>Bárbara Soares</h5>
+        <div>
+          <a href="https://github.com/BarbaraMSoares" target="_blank"><i class="fab fa-github icon-about"></i></a>
+          <a href="https://www.linkedin.com/in/b%C3%A1rbara-soares-92231a146/" target="_blank"><i class="fab fa-linkedin icon-about" target="_blank"></i></a>
+        </div>
+      </div>
+      <div class= 'd-flex flex-column align-items-center mb-5'>
+        <%= image_tag 'https://ca.slack-edge.com/T02NE0241-U03NTPJJ8J0-de5860f4c1eb-512', class: 'photo-about'%>
+        <h5 class='nome-about'>Juliana Bonardi</h5>
+        <div>
+          <a href="https://github.com/Juh-B" target="_blank"><i class="fab fa-github icon-about"></i></a>
+          <a href="https://www.linkedin.com/in/julianabonardi/" target="_blank"><i class="fab fa-linkedin icon-about"></i></a>
+        </div>
+      </div>
+      <div class= 'd-flex flex-column align-items-center'>
+        <%= image_tag 'https://ca.slack-edge.com/T02NE0241-U03NGN1PYKX-3861a25ddc60-512', class: 'photo-about'%>
+        <h5 class='nome-about'>Maurício Poças</h5>
+        <div>
+          <a href="https://github.com/mbpocas" target="_blank"><i class="fab fa-github icon-about"></i></a>
+          <a href="https://www.linkedin.com/in/mauriciopocas/" target="_blank"><i class="fab fa-linkedin icon-about"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
-
-  <div class="footer">
-      <%= image_tag 'foto-foot.png' %>
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
->>>>>>> 78e5736cc7b2016a6526d95feea985cee2a6b4c8

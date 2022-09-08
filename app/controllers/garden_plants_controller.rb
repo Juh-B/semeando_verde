@@ -1,5 +1,5 @@
 class GardenPlantsController < ApplicationController
-  before_action :set_garden_plant, only: %i[show edit update destroy]
+  before_action :set_garden_plant, only: %i[show edit update destroy notification_rega]
 
   def show
   end
@@ -19,16 +19,24 @@ class GardenPlantsController < ApplicationController
   end
 
   def update
-    if @garden_plant.update(garden_plant_params)
-      redirect_to garden_path(current_user.garden)
-    else
-      render :edit, status: :unprocessable_entity
+    respond_to do |format|
+      if @garden_plant.update(garden_plant_params)
+        format.html { redirect_to garden_plant_url(@garden_plant) }
+      else
+        format.turbo_stream { render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@garden_plant)}_form", partial: "form", locals: { garden_plant: @garden_plant }) }
+        format.html { render :edit, status: :unprocessable_entity }
+      end
     end
   end
 
   def destroy
     @garden_plant.destroy
     redirect_to garden_path(current_user.garden), status: :see_other
+  end
+
+  def notification_rega
+    NotificationMailer.with(garden_plant: @garden_plant).rega.deliver_now
+    redirect_to garden_plant_path(@garden_plant), status: :see_other
   end
 
   private
@@ -38,6 +46,6 @@ class GardenPlantsController < ApplicationController
   end
 
   def garden_plant_params
-    params.require(:garden_plant).permit(:notification)
+    params.require(:garden_plant).permit(:notification, :photo)
   end
 end

@@ -1,5 +1,6 @@
 class GardensController < ApplicationController
   # before_action :set_garden, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, only: :order_plants
 
   def show
     @garden = current_user.garden
@@ -22,9 +23,15 @@ class GardensController < ApplicationController
     end
   end
 
+  def order_plants
+    params[:orders].each_with_index do |id, index|
+      GardenPlant.find(id).update(order: index)
+    end
+  end
+
   private
 
   def garden_params
-    params.require(:garden).permit(:name, :url)
+    params.require(:garden).permit(:name, :url, :photo)
   end
 end
