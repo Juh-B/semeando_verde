@@ -66,3 +66,25 @@ input:checked{
   width: 18px;
   height: 18px;
 }
+
+.btn-my-search {
+  border-radius: 0 20px 20px 0;
+  background-color: #18936e;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: #fcf9f3;
+  color: #fff;
+  font-weight: bold ;
+
+  &:hover {
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: #fcf9f3;
+    background-color: #40e29a;
+  }
+
+}
+
+.btn-my-search:hover {
+  color: black;
+}

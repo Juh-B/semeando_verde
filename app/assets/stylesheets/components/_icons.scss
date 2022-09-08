@@ -20,9 +20,21 @@
   background-color: #ffffffe0;
   border: 1px solid #1A936F;
   border-radius: 15px;
-  padding: 10px;
   position: absolute;
+  padding: 10px;
   margin: 10px;
+}
+
+.cam-icon {
+  text-decoration: none;
+  color: #1A936F;
+  background-color: #ffffffe0;
+  border: 1px solid #1A936F;
+  border-radius: 15px;
+  position: absolute;
+  padding: 10px;
+  margin: 10px;
+  top: 0;
 }
 
 .camera-icon:hover {

@@ -4,6 +4,10 @@
   padding: 160px 0;
 }
 
+.banner-garden {
+  position: relative;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
@@ -26,17 +30,6 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
-
-// .banner-inf {
-//   // justify-content: center;
-//   // flex-direction: column;
-//   position: relative;
-//   display: flex;
-//   .camera-icon {
-//     align-items: flex-end;
-
-//   }
-// }
 
 .parallax {
   background-image: url('img_parallax.jpg');
