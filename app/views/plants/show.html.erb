@@ -28,11 +28,10 @@
               <li><%= info %></li>
             </ul>
           <% end %>
+          <%= link_to 'Adicionar', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-all btn-save btn-add" %>
       </div>
         <div class="img-btn">
-            <img src=<%= @plant.img_url %> class="img-ban">
-            <%= link_to 'Adicionar', plant_garden_plants_path(@plant), data: { turbo_method: :post, turbo_confirm: "Deseja adicionar essa planta em seu jardim?" }, class: "btn-all btn-save " %>
-
+          <img src=<%= @plant.img_url %> class="img-ban">
         </div>
     </div>
 </div>
