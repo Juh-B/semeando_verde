@@ -4,11 +4,11 @@
 
     <div class="fundo">
       <div class="search">
-          <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+          <%= form_with url: plants_path, method: :get, class: "d-flex " do %>
             <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
-              placeholder: "Encontre uma planta ..."
+              class: "form-control rounded-field",
+              placeholder: "Encontre uma planta..."
             %>
             <%= submit_tag "Search", class: "btn btn-success btn-my-search" %>
           <% end %>
