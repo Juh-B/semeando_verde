@@ -8,6 +8,8 @@
 
     <div class="d-flex justify-content-center w-100">
       <%= f.submit "Salvar", class:"btn-all btn-save garden-submit" %>
+      <%= link_to 'Cancelar', garden_path(garden), class: "btn-all btn-delete garden-cancel" %>
     </div>
+
   <% end %>
 </div>
