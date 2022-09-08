@@ -29,7 +29,12 @@
                 Indireta</p>
               <% end %>
               <%# Regar - planta %>
-              <p><i class="fa-solid fa-droplet"></i> 1x por semana</p>
+              <p><i class="fa-solid fa-droplet"></i>
+              <% if garden_plant.plant.water.include?("2") %>
+                2 vezes na semana</p>
+              <% else %>
+                1 vez na semana</p>
+              <% end %>
               <%# Toxica ou não %>
               <% if garden_plant.plant.toxic == false %>
                 <p><i class="fa-solid fa-dog"></i> Não tóxica</p>
