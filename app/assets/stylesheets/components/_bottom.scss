@@ -53,6 +53,16 @@
   color: #1A936F !important;
 }
 
-.check-box {
-  background-color: #1A936F !important;
+#check-box{
+  accent-color: #1A936F;
+}
+
+#check-box {
+  width: 16px;
+  height: 16px;
+}
+
+input:checked{
+  width: 18px;
+  height: 18px;
 }
