@@ -32,6 +32,26 @@
   padding: 7px 20px;
 }
 
-// .check-box {
-//   background-color: #1A936F;
-// }
+.btn-add {
+  margin-top: 40px;
+}
+
+// hover
+.btn-save:hover {
+  font-weight:700 !important;
+  color: #fff !important;
+}
+
+.btn-delete:hover {
+  font-weight:700 !important;
+  color: #cc6f6e !important;
+}
+
+.btn-edit:hover {
+  font-weight:700 !important;
+  color: #1A936F !important;
+}
+
+.check-box {
+  background-color: #1A936F !important;
+}
